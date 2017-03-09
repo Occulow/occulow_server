@@ -17,6 +17,8 @@ class Sensor(models.Model):
 
         return data
 
+    def __str__(self):
+        return self.name
 
 class RoomSensor(models.Model):
     NEGATIVE = -1
@@ -37,6 +39,9 @@ class RoomSensor(models.Model):
 
         return data
 
+    def __str__(self):
+        return ("%s-%s : %d" % (str(self.sensor), str(self.room), self.polarity))
+
 class Room(models.Model):
     name = models.CharField(max_length=200)
     sensors = models.ManyToManyField(Sensor, through=RoomSensor)
@@ -53,7 +58,10 @@ class Room(models.Model):
         if with_relationships:
             data['sensors'] = [s.as_dict() for s in self.sensors]
 
-        return data
+        return dat
+
+    def __str__(self):
+        return self.name 
 
 class Update(models.Model):
     value = models.IntegerField()
@@ -72,3 +80,6 @@ class Update(models.Model):
             data['sensor'] = self.sensor.as_dict()
 
         return data
+
+    def __str__(self):
+        return "%s-%s: %d" % (str(self.sensor), str(self.time), self.value)
