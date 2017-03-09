@@ -7,6 +7,7 @@ class Sensor(models.Model):
     def as_dict(self, with_relationships=False):
         data = {
             'type': 'sensor',
+            'id': self.id,
             'name': self.name,
             'dev_eui': self.dev_eui,
         }
@@ -44,6 +45,7 @@ class Room(models.Model):
     def as_dict(self, with_relationships=False):
         data = {
             'type': 'room',
+            'id': self.id,
             'name': self.name,
             'count': self.count
         }
@@ -61,6 +63,7 @@ class Update(models.Model):
     def as_dict(self, with_relationships=False):
         data = {
             'type': 'update',
+            'id': self.id,
             'time': str(self.time),
             'value': self.value,
         }
