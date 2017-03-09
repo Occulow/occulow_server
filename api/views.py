@@ -4,7 +4,9 @@ from .models import Sensor,RoomSensor,Room,Update
 from .forms import SensorForm
 import json
 
-# Sensor methods
+##################
+# Sensor methods #
+##################
 
 # GET /v1/sensors
 def list_sensors(request):
@@ -41,3 +43,17 @@ def get_sensor_updates(request, id):
     updates = [u.as_dict() for u in sensor.update_set.all()]
 
     return JsonResponse(updates, safe=False)
+
+##################
+# Room methods #
+##################
+
+# GET /v1/rooms
+def list_rooms(request):
+    rooms = [r.as_dict() for r in Room.objects.all()]
+
+    return JsonResponse(rooms, safe=False)
+
+# POST /v1/rooms
+def add_room(request):
+    return JsonResponse({})
