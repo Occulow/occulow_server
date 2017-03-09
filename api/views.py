@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseBadRequest,HttpResponseNotFound,JsonResponse
 from .models import Sensor,RoomSensor,Room,Update
 from .forms import SensorForm
@@ -30,9 +30,14 @@ def add_sensor(request):
 
 # GET /v1/sensors/<id>
 def get_sensor(request, id):
-    try:
-        sensor = Sensor.objects.get(id=id)
-    except Sensor.DoesNotExist:
-        return HttpResponseNotFound()
+    sensor = get_object_or_404(Sensor, id=id)
 
     return JsonResponse(sensor.as_dict(True))
+
+# GET /v1/sensors/<id>/updates
+def get_sensor_updates(request, id):
+    sensor = get_object_or_404(Sensor, id=id)
+
+    updates = [u.as_dict() for u in sensor.update_set.all()]
+
+    return JsonResponse(updates, safe=False)
