@@ -1,7 +1,8 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseBadRequest,HttpResponseNotFound,JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Sensor,RoomSensor,Room,Update
-from .forms import SensorForm
+from .forms import SensorForm, RoomForm
 import json
 
 ##################
@@ -27,8 +28,8 @@ def add_sensor(request):
         s = Sensor(name=form.cleaned_data['name'], dev_eui=form.cleaned_data['dev_eui'])
         s.save()
         return JsonResponse(s.as_dict())
-    else:
-        return HttpResponseBadRequest()
+
+    return HttpResponseBadRequest()
 
 # GET /v1/sensors/<id>
 def get_sensor(request, id):
@@ -56,4 +57,16 @@ def list_rooms(request):
 
 # POST /v1/rooms
 def add_room(request):
-    return JsonResponse({})
+    try:
+        body = json.loads(request.body.decode('utf-8'))
+    except ValueError:
+        return HttpResponseBadRequest()
+
+    form = RoomForm(body)
+
+    if form.is_valid():
+        r = Room(name=form.cleaned_data['name'],count=form.cleaned_data['count'])
+        r.save()
+        return JsonResponse(r.as_dict())
+
+    return HttpResponseBadRequest()

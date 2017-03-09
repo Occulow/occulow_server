@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from django.http import HttpResponseNotAllowed
+from django.views.decorators.csrf import csrf_exempt
 
 from . import views
 
@@ -8,6 +9,7 @@ def method_dispatch(**table):
     def invalid_method(request, *args, **kwargs):
         return HttpResponseNotAllowed(table.keys())
 
+    @csrf_exempt
     def d(request, *args, **kwargs):
         handler = table.get(request.method, invalid_method)
         return handler(request, *args, **kwargs)
