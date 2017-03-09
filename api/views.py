@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponseBadRequest, JsonResponse
+from django.http import HttpResponseBadRequest,HttpResponseNotFound,JsonResponse
 from .models import Sensor,RoomSensor,Room,Update
 from .forms import SensorForm
 import json
@@ -27,3 +27,12 @@ def add_sensor(request):
         return JsonResponse(s.as_dict())
     else:
         return HttpResponseBadRequest()
+
+# GET /v1/sensors/<id>
+def get_sensor(request, id):
+    try:
+        sensor = Sensor.objects.get(id=id)
+    except Sensor.DoesNotExist:
+        return HttpResponseNotFound()
+
+    return JsonResponse(sensor.as_dict(True))

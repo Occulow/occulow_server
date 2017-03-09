@@ -16,5 +16,6 @@ def method_dispatch(**table):
 
 app_name = 'api'
 urlpatterns = [
-    url(r'^sensors', method_dispatch(GET=views.list_sensors,POST=views.add_sensor), name="list_sensors"),
+    url(r'^sensors/$', method_dispatch(GET=views.list_sensors,POST=views.add_sensor), name="sensors"),
+    url(r'^sensors/(?P<id>[0-9]+)/$', method_dispatch(GET=views.get_sensor), name="get_sensor"),
 ]
