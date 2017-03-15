@@ -18,8 +18,10 @@ def list_sensors(request):
 # POST /v1/sensors
 def add_sensor(request):
     try:
+        print(request.body)
         body = json.loads(request.body.decode('utf-8'))
-    except ValueError:
+    except ValueError as e:
+        print(e)
         return HttpResponseBadRequest()
 
     form = SensorForm(body)
@@ -28,6 +30,8 @@ def add_sensor(request):
         s = Sensor(name=form.cleaned_data['name'], dev_eui=form.cleaned_data['dev_eui'])
         s.save()
         return JsonResponse(s.as_dict())
+    else:
+        print(form.errors())
 
     return HttpResponseBadRequest()
 
