@@ -1,14 +1,18 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Room from './room.jsx'
+import RoomList from './roomList.jsx'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render () {
     return (
-        <div>
-            <h1>Occulow</h1>
-            <Room name="Library" />
-        </div>
+      <div>
+        <h1>Occulow</h1>
+        <RoomList url='/v1/rooms/'/>
+      </div>
     );
   }
 }
