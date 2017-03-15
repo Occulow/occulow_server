@@ -1,0 +1,115 @@
+[
+{
+    "model": "api.sensor",
+    "pk": 1,
+    "fields": {
+        "name": "Library entry",
+        "dev_eui": "1122334455667799"
+    }
+},
+{
+    "model": "api.sensor",
+    "pk": 2,
+    "fields": {
+        "name": "Weight room entry",
+        "dev_eui": "0000000000000010"
+    }
+},
+{
+    "model": "api.roomsensor",
+    "pk": 1,
+    "fields": {
+        "sensor": 1,
+        "room": 1,
+        "polarity": 1
+    }
+},
+{
+    "model": "api.roomsensor",
+    "pk": 2,
+    "fields": {
+        "sensor": 2,
+        "room": 2,
+        "polarity": -1
+    }
+},
+{
+    "model": "api.room",
+    "pk": 1,
+    "fields": {
+        "name": "Library",
+        "count": 3
+    }
+},
+{
+    "model": "api.room",
+    "pk": 2,
+    "fields": {
+        "name": "Weight Room",
+        "count": 5
+    }
+},
+{
+    "model": "api.update",
+    "pk": 1,
+    "fields": {
+        "value": 2,
+        "time": "2017-03-15T19:37:44.943Z",
+        "sensor": 1
+    }
+},
+{
+    "model": "api.update",
+    "pk": 2,
+    "fields": {
+        "value": 1,
+        "time": "2017-03-15T19:37:50.553Z",
+        "sensor": 1
+    }
+},
+{
+    "model": "api.update",
+    "pk": 3,
+    "fields": {
+        "value": -1,
+        "time": "2017-03-15T19:37:59.402Z",
+        "sensor": 1
+    }
+},
+{
+    "model": "api.update",
+    "pk": 4,
+    "fields": {
+        "value": 1,
+        "time": "2017-03-15T19:38:05.848Z",
+        "sensor": 2
+    }
+},
+{
+    "model": "api.update",
+    "pk": 5,
+    "fields": {
+        "value": 1,
+        "time": "2017-03-15T19:38:10.849Z",
+        "sensor": 1
+    }
+},
+{
+    "model": "api.update",
+    "pk": 6,
+    "fields": {
+        "value": 2,
+        "time": "2017-03-15T19:38:18.046Z",
+        "sensor": 2
+    }
+},
+{
+    "model": "api.update",
+    "pk": 7,
+    "fields": {
+        "value": 2,
+        "time": "2017-03-15T19:38:51.113Z",
+        "sensor": 2
+    }
+}
+]

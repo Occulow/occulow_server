@@ -70,3 +70,9 @@ def add_room(request):
         return JsonResponse(r.as_dict())
 
     return HttpResponseBadRequest()
+
+# GET /v1/rooms/<id>
+def get_room(request, id):
+    room = get_object_or_404(Room, id=id)
+
+    return JsonResponse(room.as_dict(True))
