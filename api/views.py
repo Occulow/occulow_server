@@ -78,3 +78,11 @@ def get_room(request, id):
     room = get_object_or_404(Room, id=id)
 
     return JsonResponse(room.as_dict(True))
+
+# GET /v1/rooms/<id>/sensors/
+def get_room_sensors(request, id):
+    room = get_object_or_404(Room, id=id)
+
+    sensors = [s.as_dict(True) for s in room.sensors.all()]
+
+    return JsonResponse(sensors, safe=False)
