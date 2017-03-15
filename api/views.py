@@ -9,20 +9,18 @@ import json
 # Sensor methods #
 ##################
 
-# GET /v1/sensors
+# GET /v1/sensors/
 def list_sensors(request):
     sensors = [s.as_dict() for s in Sensor.objects.all()]
 
     return JsonResponse(sensors, safe=False)
 
-# POST /v1/sensors
+# POST /v1/sensors/
 def add_sensor(request):
     try:
-        print(request.body)
         body = json.loads(request.body.decode('utf-8'))
     except ValueError as e:
-        print(e)
-        return HttpResponseBadRequest()
+        return HttpResponseBadRequest('Bad encoding')
 
     form = SensorForm(body)
 
@@ -33,15 +31,15 @@ def add_sensor(request):
     else:
         print(form.errors())
 
-    return HttpResponseBadRequest()
+    return HttpResponseBadRequest(form.errors())
 
-# GET /v1/sensors/<id>
+# GET /v1/sensors/<id>/
 def get_sensor(request, id):
     sensor = get_object_or_404(Sensor, id=id)
 
     return JsonResponse(sensor.as_dict(True))
 
-# GET /v1/sensors/<id>/updates
+# GET /v1/sensors/<id>/updates/
 def get_sensor_updates(request, id):
     sensor = get_object_or_404(Sensor, id=id)
 
@@ -53,13 +51,13 @@ def get_sensor_updates(request, id):
 # Room methods #
 ##################
 
-# GET /v1/rooms
+# GET /v1/rooms/
 def list_rooms(request):
     rooms = [r.as_dict() for r in Room.objects.all()]
 
     return JsonResponse(rooms, safe=False)
 
-# POST /v1/rooms
+# POST /v1/rooms/
 def add_room(request):
     try:
         body = json.loads(request.body.decode('utf-8'))
@@ -75,7 +73,7 @@ def add_room(request):
 
     return HttpResponseBadRequest()
 
-# GET /v1/rooms/<id>
+# GET /v1/rooms/<id>/
 def get_room(request, id):
     room = get_object_or_404(Room, id=id)
 

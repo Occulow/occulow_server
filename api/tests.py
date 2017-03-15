@@ -25,7 +25,7 @@ class SensorTestCase(ApiTestCase):
     def test_get_sensor(self):
         sensor = Sensor.objects.all()[0]
 
-        res = self.client.get('/v1/sensors/%d' % sensor.id)
+        res = self.client.get('/v1/sensors/%d/' % sensor.id)
 
         self.assertEqual(res.status_code, 200)
         self.assertEqual(res.json()['name'], sensor.name)
@@ -57,3 +57,41 @@ class SensorTestCase(ApiTestCase):
 
         self.assertEqual(sensor.name, new_sensor['name'])
         self.assertEqual(sensor.dev_eui, new_sensor['dev_eui'])
+
+class RoomTestCase(ApiTestCase):
+
+    def test_list_rooms(self):
+        res = self.client.get('/v1/rooms/')
+
+        self.assertEqual(res.status_code, 200)
+
+        rooms = Room.objects.all()
+        ret_ids = [r['id'] for r in res.json()]
+
+        self.assertEqual(len(ret_ids), len(rooms))
+        for room in rooms:
+            self.assertIn(room.id, ret_ids)
+
+    def test_get_room(self):
+        room = Room.objects.all()[0]
+
+        res = self.client.get('/v1/rooms/%d/' % room.id)
+
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.json()['name'], room.name)
+
+    def test_add_room(self):
+        new_room = {
+            'name': 'Gym',
+            'count': 2
+        }
+
+        res = self.client.post('/v1/rooms/', json.dumps(new_room), content_type='application/json')
+        self.assertEqual(res.status_code, 200)
+
+        id = res.json()['id']
+
+        room = Room.objects.get(id=id)
+
+        self.assertEqual(room.name, new_room['name'])
+        self.assertEqual(room.count, new_room['count'])

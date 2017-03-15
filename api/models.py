@@ -56,7 +56,7 @@ class Room(models.Model):
         }
 
         if with_relationships:
-            data['sensors'] = [s.as_dict() for s in self.sensors]
+            data['sensors'] = [s.as_dict() for s in self.sensors.all()]
 
         return data
 
