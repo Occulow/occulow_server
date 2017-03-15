@@ -12,7 +12,6 @@ class RoomList extends React.Component {
   }
 
   loadRooms() {
-    console.log(this.props.url)
     $.ajax({
       url: this.props.url,
       dataType: 'json',
@@ -29,7 +28,7 @@ class RoomList extends React.Component {
 
   render() {
     const rooms = this.state.rooms.map((room) =>
-      <li key={room.id.toString()}>{room.name}</li>
+      <li key={room.id.toString()}>{room.name}: {room.count}</li>
     );
     return (
       <div>
