@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery'
+import Room from './room.jsx'
 
 class RoomList extends React.Component {
   constructor(props) {
@@ -28,12 +29,12 @@ class RoomList extends React.Component {
 
   render() {
     const rooms = this.state.rooms.map((room) =>
-      <li key={room.id.toString()}>{room.name}: {room.count}</li>
+      <Room id={room.id} name={room.name} count={room.count} key={room.id.toString()}/>
     );
     return (
       <div>
         <h2>Rooms</h2>
-        <ul>{rooms}</ul>
+        <ul className="collection">{rooms}</ul>
       </div>
     );
   }

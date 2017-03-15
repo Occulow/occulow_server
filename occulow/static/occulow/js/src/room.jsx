@@ -3,14 +3,14 @@ import React from 'react';
 class Room extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {count: 0};
+    this.state = {count: props.count};
   }
 
   render() {
     return (
-      <div>
-        <h2>Name: {this.props.name}</h2>
-      </div>
+      <li className="collection-item">
+        <h4>{this.props.name}: {this.state.count}</h4>
+      </li>
     );
   }
 }
