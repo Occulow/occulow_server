@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-import os, sys, ssl, json, base64, logging
+import os, sys, ssl, json, base64, logging, time
 # Setup Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'occulow_server.settings')
 import django
@@ -13,7 +13,7 @@ if sys.platform == 'win32':
 else:
     CERT_PATH = '/etc/ssl/certs/'
     PASS_PATH = '/etc/mqtt_pass.txt'
-    LOGGING_FNAME = os.path.expanduser('~/logs/occulow_mqtt.log')
+    LOGGING_FNAME = os.path.expanduser('~/logs/occulow_mqtt_%d.log' % time.strftime("%Y%m%d-%H%M%S"))
 
 
 USERNAME='team21'
