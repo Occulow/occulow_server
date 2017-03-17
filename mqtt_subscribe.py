@@ -1,18 +1,20 @@
 import paho.mqtt.client as mqtt
-import os, sys, ssl, json, base64
+import os, sys, ssl, json, base64, logging
 # Setup Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'occulow_server.settings')
 import django
 django.setup()
-
 from api.models import Sensor,Update
 
 if sys.platform == 'win32':
     CERT_PATH = '.'
     PASS_PATH = 'mqtt_pass.txt'
+    LOGGING_FNAME = 'occulow_mqtt.log'
 else:
     CERT_PATH = '/etc/ssl/certs/'
     PASS_PATH = '/etc/mqtt_pass.txt'
+    LOGGING_FNAME = '/var/log/occulow_mqtt.log'
+
 
 USERNAME='team21'
 with open(PASS_PATH, 'r') as f:
@@ -25,7 +27,7 @@ TEST_PAYLOAD = '{"devEUI":"1122334455667799","time":"2017-03-17T16:46:24.624994Z
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, rc):
-    print('Connected with result code '+str(rc))
+    logging.info('Connected with result code '+str(rc))
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
     client.subscribe('application/0000000000000100/node/#')
@@ -34,7 +36,7 @@ def on_connect(client, userdata, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    print(str(msg.topic.encode('utf-8')))
+    logging.info(str(msg.topic.encode('utf-8')))
     process_payload(bytes.decode(msg.payload))
     
 
@@ -43,15 +45,18 @@ def process_payload(payload):
     try:
         sensor = Sensor.objects.get(dev_eui=data.get('devEUI'))
     except Sensor.DoesNotExist:
-        print('Error - sensor not found: %s' % data.get('devEUI'))
+        logging.warning('Error - sensor not found: %s' % data.get('devEUI'))
         return
 
     decoded = int(base64.b64decode(data.get('data')).hex(), 16)
     new_update = Update(value=decoded,sensor=sensor)
+    logging.info(new_update)
     #new_update.save()
     
 
 if __name__ == '__main__':
+    # Setup logger
+    logging.basicConfig(filename=LOGGING_FNAME, level=logging.DEBUG)
     process_payload(TEST_PAYLOAD)
     # Setup MQTT client
     client = mqtt.Client()
