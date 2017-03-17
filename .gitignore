@@ -17,3 +17,6 @@ build/
 tests/report/
 *.sqlite3
 occulowenv/
+
+mqtt_pass.txt
+ca-certificates.crt

@@ -4,15 +4,17 @@ import sys
 import ssl
 import django
 
-SETTINGS_MODULE = 'my_project.settings'
+SETTINGS_MODULE = 'occulow_server.settings'
 
 if sys.platform == 'win32':
     CERT_PATH = '.'
+    PASS_PATH = 'mqtt_pass.txt'
 else:
     CERT_PATH = '/etc/ssl/certs/'
+    PASS_PATH = '/etc/mqtt_pass.txt'
 
 USERNAME='team21'
-with open('/etc/mqtt_pass.txt', 'r') as f:
+with open(PASS_PATH, 'r') as f:
     PASSWORD=f.read().strip()
 HOST='openchirp.andrew.cmu.edu'
 PORT=1883
@@ -37,7 +39,7 @@ if __name__ == '__main__':
     client = mqtt.Client()
     client.username_pw_set(USERNAME, PASSWORD)
 
-    client.tls_set(os.path.join(cert_path, 'ca-certificates.crt'), 
+    client.tls_set(os.path.join(CERT_PATH, 'ca-certificates.crt'), 
         cert_reqs=ssl.CERT_REQUIRED, 
         tls_version=ssl.PROTOCOL_TLSv1_2, 
         ciphers=None)
