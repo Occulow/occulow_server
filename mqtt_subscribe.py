@@ -13,7 +13,7 @@ if sys.platform == 'win32':
 else:
     CERT_PATH = '/etc/ssl/certs/'
     PASS_PATH = '/etc/mqtt_pass.txt'
-    LOGGING_FNAME = '~/logs/occulow_mqtt.log'
+    LOGGING_FNAME = os.path.expandpath('logs/occulow_mqtt.log')
 
 
 USERNAME='team21'
