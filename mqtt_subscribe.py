@@ -1,10 +1,11 @@
 import paho.mqtt.client as mqtt
-import os
-import sys
-import ssl
+import os, sys, ssl, json, base64
+# Setup Django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'occulow_server.settings')
 import django
+django.setup()
 
-SETTINGS_MODULE = 'occulow_server.settings'
+from api.models import Sensor,Update
 
 if sys.platform == 'win32':
     CERT_PATH = '.'
@@ -20,21 +21,40 @@ HOST='openchirp.andrew.cmu.edu'
 PORT=1883
 KEEPALIVE=60
 
+TEST_PAYLOAD = '{"devEUI":"1122334455667799","time":"2017-03-17T16:46:24.624994Z","fPort":1,"gatewayCount":2,"rssi":-47,"data":"DQ=="}'
+
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, rc):
     print('Connected with result code '+str(rc))
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
     client.subscribe('application/0000000000000100/node/#')
+    client.subscribe('application/0000000000000100/+/+/rx')
+    client.subscribe('gateway/#')
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-    print(str(msg.topic.encode('utf-8'))+' '+str(msg.payload))
+    print(str(msg.topic.encode('utf-8')))
+    process_payload(bytes.decode(msg.payload))
+    
+
+def process_payload(payload):
+    data = json.loads(payload)
+    try:
+        sensor = Sensor.objects.get(dev_eui=data.get('devEUI'))
+        print(sensor)
+    except Sensor.DoesNotExist:
+        print('Error - sensor not found: %s' % data.get('devEUI'))
+        return
+
+    decoded = int(base64.b64decode(data.get('data')).hex(), 16)
+    new_update = Update(value=decoded,sensor=sensor)
+    print(new_update)
+    #new_update.save()
+    
 
 if __name__ == '__main__':
-    # Setup Django
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', SETTINGS_MODULE)
-    django.setup()
+    process_payload(TEST_PAYLOAD)
     # Setup MQTT client
     client = mqtt.Client()
     client.username_pw_set(USERNAME, PASSWORD)
