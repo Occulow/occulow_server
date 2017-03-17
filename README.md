@@ -15,3 +15,5 @@ Once packages are installed, there are two npm scripts used to build the react c
 
 ## Prod setup
 
+### Circus
+[Circus](https://circus.readthedocs.io/en/latest/) is used to manage the mqtt worker process.

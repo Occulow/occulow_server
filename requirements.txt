@@ -1,3 +1,4 @@
 Django==1.10.2
 psycopg2==2.6.2
 paho-mqtt==1.2
+circus==0.14.0
