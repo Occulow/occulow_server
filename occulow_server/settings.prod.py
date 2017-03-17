@@ -18,10 +18,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open('/etc/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['occulow.com']
 
 
 # Application definition
@@ -67,16 +66,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'occulow_server.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+with open('/etc/db_pass.txt') as f:
+    DB_PASS = f.read().strip()
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'occulow',
+        'USER': 'occulow_db',
+        'PASSWORD': DB_PASS,
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
 
 
 # Password validation

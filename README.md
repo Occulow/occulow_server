@@ -11,7 +11,7 @@ The backend is Python 3.5 running Django 1.10.2. Running `pip install -r require
 
 The frontend is built using React, so there's a bit more tooling required to make changes. Ensure that [npm](https://www.npmjs.com/get-npm) is installed, and run `npm install` while inside the `occulow` app directory. This should install all of the dev and production dependencies.
 
-Once packages are installed, there are two npm scripts used to build the react code: `npm run build` and `npm run watch`. `npm run build` will build all `.jsx` files inside the /static/js/src/ directory, and bundle them together into `/static/js/dist/bundle.js`. `npm run watch` will watch the source directory run the build process every time a file is saved.
+Once packages are installed, there are two npm scripts used to build the react code: `npm run build` and `npm run watch`. `npm run build` will build all `.jsx` files inside the `/static/js/src/` directory, and bundle them together into `/static/js/dist/bundle.js`. `npm run watch` will watch the source directory and run the build process every time a file is saved.
 
 ## Prod setup
 
