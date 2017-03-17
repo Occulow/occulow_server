@@ -8,8 +8,13 @@ class Room extends React.Component {
 
   render() {
     return (
-      <li className="collection-item">
-        <h4>{this.props.name}: {this.state.count}</h4>
+      <li>
+        <div className="collapsible-header">
+          <h4>{this.props.name}: {this.state.count}</h4>
+        </div>
+        <div className="collapsible-body">
+          Foo
+        </div>
       </li>
     );
   }

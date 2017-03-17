@@ -1,4 +1,5 @@
 import React from 'react';
+import 'materialize-css';
 import {render} from 'react-dom';
 import RoomList from './roomList.jsx'
 

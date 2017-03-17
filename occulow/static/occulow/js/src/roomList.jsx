@@ -34,7 +34,7 @@ class RoomList extends React.Component {
     return (
       <div>
         <h2>Rooms</h2>
-        <ul className="collection">{rooms}</ul>
+        <ul className="collapsible" data-collapsible="accordion">{rooms}</ul>
       </div>
     );
   }
