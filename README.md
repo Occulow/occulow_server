@@ -16,4 +16,4 @@ Once packages are installed, there are two npm scripts used to build the react c
 ## Prod setup
 
 ### Circus
-[Circus](https://circus.readthedocs.io/en/latest/) is used to manage the mqtt worker process.
+[Circus](https://circus.readthedocs.io/en/latest/) is used to manage the mqtt worker process. When in the `occulow_server` directory, run `circusd --daemon circus.ini` to start the circus daemon and the mqtt job. The program is configured to write logs to `~/logs/occulow_mqtt_<datetime>.log`. Running `circusctl` allows control over the running daemon process.

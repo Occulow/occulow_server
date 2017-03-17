@@ -51,7 +51,7 @@ def process_payload(payload):
     decoded = int(base64.b64decode(data.get('data')).hex(), 16)
     new_update = Update(value=decoded,sensor=sensor)
     logging.info(new_update)
-    #new_update.save()
+    new_update.save()
     
 
 if __name__ == '__main__':
