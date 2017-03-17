@@ -29,12 +29,17 @@ class RoomList extends React.Component {
 
   render() {
     const rooms = this.state.rooms.map((room) =>
-      <Room id={room.id} name={room.name} count={room.count} key={room.id.toString()}/>
+      <Room 
+        id={room.id}
+        name={room.name}
+        count={room.count}
+        key={room.id.toString()}
+        sensors_url={"/v1/rooms/" + room.id + "/sensors/"}/>
     );
     return (
       <div>
         <h2>Rooms</h2>
-        <ul className="collapsible" data-collapsible="accordion">{rooms}</ul>
+        {rooms}
       </div>
     );
   }

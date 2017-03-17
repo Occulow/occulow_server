@@ -1,4 +1,5 @@
 from django.db import models
+from time import strftime
 
 class Sensor(models.Model):
     name = models.CharField(max_length=200)
@@ -68,11 +69,15 @@ class Update(models.Model):
     time = models.DateTimeField(auto_now_add=True)
     sensor = models.ForeignKey(Sensor)
 
+    def formatted_time(self):
+        return self.time.strftime('%a, %b %d %Y at %I:%M:%S %p')
+
     def as_dict(self, with_relationships=False):
         data = {
             'type': 'update',
             'id': self.id,
             'time': str(self.time),
+            'formatted_time': self.formatted_time(),
             'value': self.value,
         }
 
