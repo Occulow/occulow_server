@@ -23,7 +23,7 @@ HOST='openchirp.andrew.cmu.edu'
 PORT=1883
 KEEPALIVE=60
 
-TEST_PAYLOAD = '{"devEUI":"1122334455667799","time":"2017-03-17T16:46:24.624994Z","fPort":1,"gatewayCount":2,"rssi":-47,"data":"DQ=="}'
+#TEST_PAYLOAD = '{"devEUI":"1122334455667799","time":"2017-03-17T16:46:24.624994Z","fPort":1,"gatewayCount":2,"rssi":-47,"data":"DQ=="}'
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, rc):
@@ -57,7 +57,7 @@ def process_payload(payload):
 if __name__ == '__main__':
     # Setup logger
     logging.basicConfig(filename=LOGGING_FNAME, level=logging.DEBUG)
-    process_payload(TEST_PAYLOAD)
+    #process_payload(TEST_PAYLOAD)
     # Setup MQTT client
     client = mqtt.Client()
     client.username_pw_set(USERNAME, PASSWORD)
