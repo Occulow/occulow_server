@@ -42,15 +42,13 @@ def process_payload(payload):
     data = json.loads(payload)
     try:
         sensor = Sensor.objects.get(dev_eui=data.get('devEUI'))
-        print(sensor)
     except Sensor.DoesNotExist:
         print('Error - sensor not found: %s' % data.get('devEUI'))
         return
 
     decoded = int(base64.b64decode(data.get('data')).hex(), 16)
     new_update = Update(value=decoded,sensor=sensor)
-    print(new_update)
-    #new_update.save()
+    new_update.save()
     
 
 if __name__ == '__main__':
