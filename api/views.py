@@ -43,7 +43,11 @@ def get_sensor(request, id):
 def get_sensor_updates(request, id):
     sensor = get_object_or_404(Sensor, id=id)
 
-    updates = [u.as_dict() for u in sensor.update_set.all().order_by('-time')]
+    latest_id = request.GET.get('latest')
+    update_query = sensor.update_set.all().order_by('-time')
+    if int(latest_id) > -1:
+        update_query = update_query.filter(id__gt=latest_id)
+    updates = [u.as_dict() for u in update_query]
 
     return JsonResponse(updates, safe=False)
 

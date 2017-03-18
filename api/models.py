@@ -93,7 +93,7 @@ class Update(models.Model):
             room = rs.room
             room.count += self.value * rs.polarity
             room.save()
-        super(Model, self).save(*args, **kwargs)
+        super(Update, self).save(*args, **kwargs)
 
     def __str__(self):
         return "%s-%s: %d" % (str(self.sensor), str(self.time), self.value)

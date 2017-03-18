@@ -14,6 +14,13 @@ class Sensor extends React.Component {
     this.loadSensor();
     this.loadUpdates();
     $('.collapsible').collapsible();
+
+    var intervalId = setInterval(this.loadUpdates.bind(this), 5000);
+    this.setState({intervalId: intervalId});
+  }
+
+  componentWillUnmount() {
+   clearInterval(this.state.intervalId);
   }
 
   loadSensor() {
@@ -33,13 +40,22 @@ class Sensor extends React.Component {
   }
 
   loadUpdates() {
+    var latest_id;
+    if (this.state.updates.length > 0) {
+      latest_id = this.state.updates[0].id
+    } else {
+      latest_id = -1
+    }
+
+    const url = this.props.updates_url + "?latest=" + latest_id;
+    
     $.ajax({
-      url: this.props.updates_url,
+      url: url,
       dataType: 'json',
       success: function(data) {
         this.setState({
-          updates: data
-        })
+          updates: data.concat(this.state.updates)
+        });
       }.bind(this),
       error: function(xhr, status, err) {
         console.error(this.props.updates_url, status, err.toString());

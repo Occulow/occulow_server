@@ -57,7 +57,6 @@ def process_payload(payload):
 if __name__ == '__main__':
     # Setup logger
     logging.basicConfig(filename=LOGGING_FNAME, level=logging.DEBUG)
-    #process_payload(TEST_PAYLOAD)
     # Setup MQTT client
     client = mqtt.Client()
     client.username_pw_set(USERNAME, PASSWORD)
