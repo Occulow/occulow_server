@@ -46,7 +46,7 @@
     "pk": 2,
     "fields": {
         "name": "Weight Room",
-        "count": 5
+        "count": 1
     }
 },
 {
@@ -80,7 +80,7 @@
     "model": "api.update",
     "pk": 4,
     "fields": {
-        "value": 1,
+        "value": -1,
         "time": "2017-03-15T19:38:05.848Z",
         "sensor": 2
     }
@@ -98,7 +98,7 @@
     "model": "api.update",
     "pk": 6,
     "fields": {
-        "value": 2,
+        "value": -2,
         "time": "2017-03-15T19:38:18.046Z",
         "sensor": 2
     }
@@ -109,7 +109,7 @@
     "fields": {
         "value": 2,
         "time": "2017-03-15T19:38:51.113Z",
-        "sensor": 2
+        "sensor": -2
     }
 }
 ]
