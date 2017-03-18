@@ -5,7 +5,7 @@ class Room extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: props.count,
+      count: 0,
       sensors: []
     };
   }
@@ -29,14 +29,19 @@ class Room extends React.Component {
     });
   }
 
+  updateCount(val) {
+    this.setState({count: this.state.count + val});
+  }
+
   render() {
     const sensors = this.state.sensors.map((s) => 
       <Sensor
-        id={s.id}
-        key={s.id.toString()}
+        id={s.sensor.id}
+        key={s.sensor.id.toString()}
         polarity={s.polarity}
-        sensor_url={"/v1/sensors/" + s.id + "/"}
-        updates_url={"/v1/sensors/" + s.id + "/updates/"} />
+        sensor_url={"/v1/sensors/" + s.sensor.id + "/"}
+        updates_url={"/v1/sensors/" + s.sensor.id + "/updates/"}
+        onUpdate={this.updateCount.bind(this)} />
     );
     return (
       <div>

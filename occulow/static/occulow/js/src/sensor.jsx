@@ -53,8 +53,13 @@ class Sensor extends React.Component {
       url: url,
       dataType: 'json',
       success: function(data) {
+        var newArr = this.state.updates;
+        for (let i = data.length-1; i >= 0; i--) {
+          newArr.unshift(data[i]);
+          this.props.onUpdate(data[i].value*this.props.polarity);
+        }
         this.setState({
-          updates: data.concat(this.state.updates)
+          updates: newArr
         });
       }.bind(this),
       error: function(xhr, status, err) {

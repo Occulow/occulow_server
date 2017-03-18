@@ -87,6 +87,6 @@ def get_room(request, id):
 def get_room_sensors(request, id):
     room = get_object_or_404(Room, id=id)
 
-    sensors = [s.as_dict(True) for s in room.sensors.all()]
+    sensors = [s.as_dict() for s in RoomSensor.objects.filter(room=room)]
 
     return JsonResponse(sensors, safe=False)

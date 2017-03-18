@@ -33,7 +33,7 @@ class RoomSensor(models.Model):
     def as_dict(self):
         data = {
             'type': 'roomsensor',
-            'sensor': self.sensor.id,
+            'sensor': self.sensor.as_dict(False),
             'room': self.room.id,
             'polarity': self.polarity
         }

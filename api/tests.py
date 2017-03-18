@@ -95,15 +95,3 @@ class RoomTestCase(ApiTestCase):
 
         self.assertEqual(room.name, new_room['name'])
         self.assertEqual(room.count, new_room['count'])
-
-    def test_get_room_sensors(self):
-        room = Room.objects.all()[0]
-
-        res = self.client.get('/v1/rooms/%d/sensors/' % room.id)
-
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(len(res.json()), len(room.sensors.all()))
-
-        ret_ids = [s['id'] for s in res.json()]
-        for s in room.sensors.all():
-            self.assertIn(s.id, ret_ids)
