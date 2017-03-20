@@ -43,9 +43,9 @@ def on_message(client, userdata, msg):
 def process_payload(payload):
     json_payload = json.loads(payload)
     try:
-        sensor = Sensor.objects.get(dev_eui=data.get('devEUI'))
+        sensor = Sensor.objects.get(dev_eui=json_payload.get('devEUI'))
     except Sensor.DoesNotExist:
-        logging.warning('Error - sensor not found: %s' % data.get('devEUI'))
+        logging.warning('Error - sensor not found: %s' % json_payload.get('devEUI'))
         return
 
     data = json_payload.get('data')
