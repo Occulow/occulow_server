@@ -30,9 +30,9 @@ def on_connect(client, userdata, rc):
     logging.info('Connected with result code '+str(rc))
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe('application/0000000000000100/node/#')
+    #client.subscribe('application/0000000000000100/node/#')
     client.subscribe('application/0000000000000100/+/+/rx')
-    client.subscribe('gateway/#')
+    #client.subscribe('gateway/#')
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
@@ -41,14 +41,24 @@ def on_message(client, userdata, msg):
     
 
 def process_payload(payload):
-    data = json.loads(payload)
+    json_payload = json.loads(payload)
     try:
         sensor = Sensor.objects.get(dev_eui=data.get('devEUI'))
     except Sensor.DoesNotExist:
         logging.warning('Error - sensor not found: %s' % data.get('devEUI'))
         return
 
-    decoded = int(base64.b64decode(data.get('data')).hex(), 16)
+    data = json_payload.get('data')
+
+    if data:
+        try:
+            decoded = int(base64.b64decode(data).hex(), 16)
+        except Exception as e:
+            logging.warning('Error - couldn\'t decode payload data: ' + str(e))
+            return
+    else:
+        logging.warning('Error - data not in payload: ' + str(json_payload))
+        return
     new_update = Update(value=decoded,sensor=sensor)
     logging.info(new_update)
     new_update.save()
