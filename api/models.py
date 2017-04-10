@@ -65,12 +65,16 @@ class Room(models.Model):
         return self.name 
 
 class Update(models.Model):
-    value = models.IntegerField()
+    count_in = models.IntegerField()
+    count_out = models.IntegerField()
     time = models.DateTimeField(auto_now_add=True)
     sensor = models.ForeignKey(Sensor)
 
     def formatted_time(self):
         return self.time.strftime('%a, %b %d %Y at %I:%M:%S %p')
+
+    def delta(self):
+        return self.count_in - self.count_out
 
     def as_dict(self, with_relationships=False):
         data = {
