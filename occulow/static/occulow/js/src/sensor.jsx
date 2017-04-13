@@ -80,7 +80,7 @@ class Sensor extends React.Component {
     return (
       <li>
         <div className="collapsible-header">
-          <h5>{this.state.name} - {this.state.dev_eui} - {this.props.polarity}</h5>
+          <h5>{this.state.name} - {this.state.dev_eui} ({this.props.polarity})</h5>
         </div>
         <div className="collapsible-body">
           <h5>Updates</h5>
