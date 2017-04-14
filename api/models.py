@@ -65,12 +65,16 @@ class Room(models.Model):
         return self.name 
 
 class Update(models.Model):
-    value = models.IntegerField()
+    count_in = models.IntegerField()
+    count_out = models.IntegerField()
     time = models.DateTimeField(auto_now_add=True)
     sensor = models.ForeignKey(Sensor)
 
     def formatted_time(self):
         return self.time.strftime('%a, %b %d %Y at %I:%M:%S %p')
+
+    def delta(self):
+        return self.count_in - self.count_out
 
     def as_dict(self, with_relationships=False):
         data = {
@@ -78,7 +82,9 @@ class Update(models.Model):
             'id': self.id,
             'time': str(self.time),
             'formatted_time': self.formatted_time(),
-            'value': self.value,
+            'count_in': self.count_in,
+            'count_out': self.count_out,
+            'delta': self.delta()
         }
 
         if with_relationships:
@@ -91,9 +97,10 @@ class Update(models.Model):
         room_sensors = RoomSensor.objects.filter(sensor=self.sensor)
         for rs in room_sensors:
             room = rs.room
-            room.count += self.value * rs.polarity
+            room.count += self.delta() * rs.polarity
             room.save()
         super(Update, self).save(*args, **kwargs)
 
     def __str__(self):
-        return "%s-%s: %d" % (str(self.sensor), str(self.time), self.value)
+        return "%s-%s: +(%d) -(%d) = %d" % (str(self.sensor), str(self.time), 
+                                            self.count_in, self.count_out, self.delta())

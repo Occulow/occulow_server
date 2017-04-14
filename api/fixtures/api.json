@@ -53,7 +53,8 @@
     "model": "api.update",
     "pk": 1,
     "fields": {
-        "value": 2,
+        "count_in": 3,
+        "count_out": 1,
         "time": "2017-03-15T19:37:44.943Z",
         "sensor": 1
     }
@@ -62,7 +63,8 @@
     "model": "api.update",
     "pk": 2,
     "fields": {
-        "value": 1,
+        "count_in": 1,
+        "count_out": 0,
         "time": "2017-03-15T19:37:50.553Z",
         "sensor": 1
     }
@@ -71,7 +73,8 @@
     "model": "api.update",
     "pk": 3,
     "fields": {
-        "value": -1,
+        "count_in": 1,
+        "count_out": 2,
         "time": "2017-03-15T19:37:59.402Z",
         "sensor": 1
     }
@@ -80,7 +83,8 @@
     "model": "api.update",
     "pk": 4,
     "fields": {
-        "value": -1,
+        "count_in": 3,
+        "count_out": 2,
         "time": "2017-03-15T19:38:05.848Z",
         "sensor": 2
     }
@@ -89,7 +93,8 @@
     "model": "api.update",
     "pk": 5,
     "fields": {
-        "value": 1,
+        "count_in": 1,
+        "count_out": 0,
         "time": "2017-03-15T19:38:10.849Z",
         "sensor": 1
     }
@@ -98,7 +103,8 @@
     "model": "api.update",
     "pk": 6,
     "fields": {
-        "value": -2,
+        "count_in": 2,
+        "count_out": 4,
         "time": "2017-03-15T19:38:18.046Z",
         "sensor": 2
     }
@@ -107,9 +113,10 @@
     "model": "api.update",
     "pk": 7,
     "fields": {
-        "value": 2,
+        "count_in": 3,
+        "count_out": 5,
         "time": "2017-03-15T19:38:51.113Z",
-        "sensor": -2
+        "sensor": 2
     }
 }
 ]

@@ -56,7 +56,7 @@ class Sensor extends React.Component {
         var newArr = this.state.updates;
         for (let i = data.length-1; i >= 0; i--) {
           newArr.unshift(data[i]);
-          this.props.onUpdate(data[i].value*this.props.polarity);
+          this.props.onUpdate(data[i].delta*this.props.polarity);
         }
         this.setState({
           updates: newArr
@@ -72,13 +72,15 @@ class Sensor extends React.Component {
     const updates = this.state.updates.map((update) => 
       <tr key={update.id.toString()}>
         <td>{update.formatted_time}</td>
-        <td>{update.value}</td>
+        <td>{update.count_in}</td>
+        <td>{update.count_out}</td>
+        <td>{update.delta * this.props.polarity}</td>
       </tr>
     );
     return (
       <li>
         <div className="collapsible-header">
-          <h5>{this.state.name} - {this.state.dev_eui}</h5>
+          <h5>{this.state.name} - {this.state.dev_eui} ({this.props.polarity})</h5>
         </div>
         <div className="collapsible-body">
           <h5>Updates</h5>
@@ -86,7 +88,9 @@ class Sensor extends React.Component {
             <thead>
               <tr>
                 <th>Time</th>
-                <th>Value</th>
+                <th>In</th>
+                <th>Out</th>
+                <th>Delta (w/ polarity)</th>
               </tr>
             </thead>
             <tbody>
