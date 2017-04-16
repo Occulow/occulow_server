@@ -45,8 +45,11 @@ def get_sensor_updates(request, id):
 
     latest_id = request.GET.get('latest')
     update_query = sensor.update_set.all().order_by('-time')
-    if int(latest_id) > -1:
-        update_query = update_query.filter(id__gt=latest_id)
+    try:
+        if int(latest_id) > -1:
+            update_query = update_query.filter(id__gt=latest_id)
+    except TypeError:
+        pass
     updates = [u.as_dict() for u in update_query]
 
     return JsonResponse(updates, safe=False)
