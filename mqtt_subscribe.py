@@ -51,17 +51,18 @@ def process_payload(payload):
     data = json_payload.get('data')
 
     if data:
+        logging.info('Raw payload: ' + str(data))
         try:
             decoded = base64.b64decode(data)
-            in_count = int(decoded[0:2], 16)
-            out_count = int(decoded[2:4], 16)
+            count_in = int(decoded[0:2], 16)
+            count_out = int(decoded[2:4], 16)
         except Exception as e:
             logging.warning('Error - couldn\'t decode payload data: ' + str(e))
             return
     else:
         logging.warning('Error - data not in payload: ' + str(json_payload))
         return
-    new_update = Update(in_count=in_count, out_count=out_count,sensor=sensor)
+    new_update = Update(count_in=count_in, count_out=count_out,sensor=sensor)
     logging.info(new_update)
     new_update.save()
     
