@@ -99,6 +99,8 @@ class Update(models.Model):
         for rs in room_sensors:
             room = rs.room
             room.count += self.delta() * rs.polarity
+            if room.count < 0:
+                room.count = 0
             room.save()
         super(Update, self).save(*args, **kwargs)
 

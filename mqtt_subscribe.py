@@ -53,7 +53,7 @@ def process_payload(payload):
     if data:
         logging.info('Raw payload: ' + str(data))
         try:
-            decoded = base64.b64decode(data)
+            decoded = base64.b64decode(data).hex()
             count_in = int(decoded[0:2], 16)
             count_out = int(decoded[2:4], 16)
         except Exception as e:
