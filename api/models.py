@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from time import strftime
 
 class Sensor(models.Model):
@@ -67,7 +68,7 @@ class Room(models.Model):
 class Update(models.Model):
     count_in = models.IntegerField()
     count_out = models.IntegerField()
-    time = models.DateTimeField(auto_now_add=True)
+    time = models.DateTimeField(default=timezone.now)
     sensor = models.ForeignKey(Sensor)
 
     def formatted_time(self):
