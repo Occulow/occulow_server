@@ -1,7 +1,7 @@
 import React from 'react';
 import 'materialize-css';
 import {render} from 'react-dom';
-import RoomList from './roomList.jsx'
+import RoomList from './roomList.jsx';
 
 class App extends React.Component {
   constructor(props) {

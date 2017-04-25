@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery'
 import Room from './room.jsx'
+import RoomForm from './RoomForm.jsx';
 
 class RoomList extends React.Component {
   constructor(props) {
@@ -27,6 +28,14 @@ class RoomList extends React.Component {
     });
   }
 
+  onNewRoom(data) {
+    var arr = this.state.rooms;
+    arr.push(data);
+    this.setState({
+      rooms: arr
+    })
+  }
+
   render() {
     const rooms = this.state.rooms.map((room) =>
       <Room 
@@ -40,6 +49,7 @@ class RoomList extends React.Component {
       <div>
         <h2>Rooms</h2>
         {rooms}
+        <RoomForm url={this.props.url} onNewRoom={this.onNewRoom.bind(this)}/>
       </div>
     );
   }
