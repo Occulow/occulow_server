@@ -3,24 +3,41 @@ import $ from 'jquery'
 import Room from './room.jsx'
 import RoomForm from './RoomForm.jsx';
 import SensorForm from './SensorForm.jsx';
+import RoomSensorForm from './RoomSensorForm.jsx';
 
 class RoomList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {rooms: []};
+    this.state = {rooms: [], sensors: []};
   }
 
   componentDidMount() {
     this.loadRooms();
+    this.loadSensors();
   }
 
   loadRooms() {
     $.ajax({
-      url: this.props.url,
+      url: this.props.room_url,
       dataType: 'json',
       success: function(data) {
         this.setState({
           rooms: data
+        })
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  }
+
+  loadSensors() {
+    $.ajax({
+      url: this.props.sensor_url,
+      dataType: 'json',
+      success: function(data) {
+        this.setState({
+          sensors: data
         })
       }.bind(this),
       error: function(xhr, status, err) {
@@ -52,6 +69,7 @@ class RoomList extends React.Component {
         {rooms}
         <RoomForm url={this.props.url} onNewRoom={this.onNewRoom.bind(this)}/>
         <SensorForm url={'/v1/sensors/'} />
+        <RoomSensorForm url={'/v1/sensors'} sensors={this.state.sensors} rooms={this.state.rooms} />
       </div>
     );
   }

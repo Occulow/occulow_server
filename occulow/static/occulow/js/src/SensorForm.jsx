@@ -1,5 +1,4 @@
 import React from 'react';
-import 'materialize-css';
 
 class SensorForm extends React.Component {
   constructor(props) {

@@ -18,7 +18,7 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col s12">
-            <RoomList url='/v1/rooms/'/>
+            <RoomList room_url='/v1/rooms/' sensor_url='/v1/sensors/'/>
           </div>
         </div>
       </div>
