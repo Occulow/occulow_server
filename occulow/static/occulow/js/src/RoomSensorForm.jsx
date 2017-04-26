@@ -14,13 +14,12 @@ class RoomSensorForm extends React.Component {
   submit() {
     var data = {
       sensor: this.state.sensor,
-      room: this.state.room,
       polarity: this.state.polarity
     };
     console.log(data)
 
     $.ajax({
-      url: this.props.url,
+      url: '/v1/rooms/' + this.state.room + '/sensors/',
       type: 'POST',
       contentType: 'application/json; charset=utf-8',
       dataType: 'json',
@@ -54,6 +53,7 @@ class RoomSensorForm extends React.Component {
   }
 
   onRoomUpdate(event) {
+    console.log(event.target.value)
     this.setState({
       room: event.target.value
     });

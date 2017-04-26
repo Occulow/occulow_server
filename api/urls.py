@@ -35,6 +35,6 @@ urlpatterns = [
         method_dispatch(GET=views.get_room),
         name="get_room"),
     url(r'^rooms/(?P<id>[0-9]+)/sensors/$',
-        method_dispatch(GET=views.get_room_sensors),
-        name="get_room_sensors"),
+        method_dispatch(GET=views.get_room_sensors, POST=views.add_room_sensor),
+        name="room_sensors"),
 ]

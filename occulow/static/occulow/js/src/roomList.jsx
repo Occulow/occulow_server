@@ -54,6 +54,10 @@ class RoomList extends React.Component {
     })
   }
 
+  onNewRoomSensor(data) {
+    
+  }
+
   render() {
     const rooms = this.state.rooms.map((room) =>
       <Room 
@@ -69,7 +73,7 @@ class RoomList extends React.Component {
         {rooms}
         <RoomForm url={this.props.url} onNewRoom={this.onNewRoom.bind(this)}/>
         <SensorForm url={'/v1/sensors/'} />
-        <RoomSensorForm url={'/v1/sensors'} sensors={this.state.sensors} rooms={this.state.rooms} />
+        <RoomSensorForm sensors={this.state.sensors} rooms={this.state.rooms} />
       </div>
     );
   }

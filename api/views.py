@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponseBadRequest,HttpResponseNotFound,JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .models import Sensor,RoomSensor,Room,Update
-from .forms import SensorForm, RoomForm
+from .forms import SensorForm, RoomForm, RoomSensorForm
 import json
 
 ##################
@@ -93,3 +93,24 @@ def get_room_sensors(request, id):
     sensors = [s.as_dict() for s in RoomSensor.objects.filter(room=room)]
 
     return JsonResponse(sensors, safe=False)
+
+# POST /v1/rooms/<id>/sensors/
+def add_room_sensor(request, id):
+    room = get_object_or_404(Room, id=id)
+
+    try:
+        body = json.loads(request.body.decode('utf-8'))
+    except ValueError:
+        return HttpResponseBadRequest()
+
+    form = RoomSensorForm(body)
+
+    if form.is_valid():
+        # Guaranteed to work because of form validation
+        sensor = Sensor.objects.get(id=form.cleaned_data['sensor'])
+        rs = RoomSensor(room=room,sensor=sensor,polarity=form.cleaned_data['polarity'])
+        rs.save()
+
+        return JsonResponse(rs.as_dict())
+
+    return HttpResponseBadRequest()
