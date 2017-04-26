@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery'
 import Room from './room.jsx'
 import RoomForm from './RoomForm.jsx';
+import SensorForm from './SensorForm.jsx';
 
 class RoomList extends React.Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class RoomList extends React.Component {
         <h2>Rooms</h2>
         {rooms}
         <RoomForm url={this.props.url} onNewRoom={this.onNewRoom.bind(this)}/>
+        <SensorForm url={'/v1/sensors/'} />
       </div>
     );
   }
