@@ -48,7 +48,7 @@ class Room extends React.Component {
         <div className="col s12 m8">
         <h3>{this.props.name}</h3>
         <h4>Current occupancy: <span className="light-blue-text">{this.state.count}</span></h4>
-        <ul className="collapsible green lighten-2" data-collapsible="accordion">
+        <ul className="collapsible red lighten-2" data-collapsible="accordion">
           {sensors}
         </ul>
         </div>
