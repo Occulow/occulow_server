@@ -81,7 +81,7 @@ class Sensor extends React.Component {
 
     return (
       <li>
-        <div className="collapsible-header green lighten-2">
+        <div className="collapsible-header white">
           <h5>{this.state.name} sensor</h5>
         </div>
         <div className="collapsible-body">
