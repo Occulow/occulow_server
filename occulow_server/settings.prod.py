@@ -20,7 +20,7 @@ with open('/etc/secret_key.txt') as f:
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['occulow.com']
+ALLOWED_HOSTS = ['rooms.occulow.com', 'occulow.com']
 
 
 # Application definition
