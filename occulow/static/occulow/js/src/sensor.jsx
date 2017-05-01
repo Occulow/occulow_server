@@ -1,5 +1,5 @@
 import React from 'react';
-import Chart from 'chart.js';
+import OccupancyChart from './OccupancyChart.jsx';
 
 class Sensor extends React.Component {
   constructor(props) {
@@ -85,6 +85,7 @@ class Sensor extends React.Component {
           <h5>{this.state.name} sensor</h5>
         </div>
         <div className="collapsible-body">
+          <OccupancyChart width={400} height={200} chartId={this.state.name} data={this.state.updates}/>
           <p>Dev EUI: {this.state.dev_eui}</p>
           <p>Polarity: {this.props.polarity}</p>
           <h5>Updates</h5>

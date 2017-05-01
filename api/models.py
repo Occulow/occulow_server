@@ -74,6 +74,9 @@ class Update(models.Model):
     def formatted_time(self):
         return self.time.strftime('%a, %b %d %Y at %I:%M:%S %p')
 
+    def d3_time(self):
+        return self.time.strftime('%I:%M:%S')
+
     def delta(self):
         return self.count_in - self.count_out
 
@@ -82,6 +85,7 @@ class Update(models.Model):
             'type': 'update',
             'id': self.id,
             'time': str(self.time),
+            'd3_time': self.d3_time(), 
             'formatted_time': self.formatted_time(),
             'count_in': self.count_in,
             'count_out': self.count_out,
