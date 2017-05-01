@@ -1,17 +1,25 @@
 import React from 'react';
 import Sensor from './sensor.jsx'
+import update from 'immutability-helper';
 
 class Room extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      count: this.props.count,
       sensors: []
     };
   }
 
   componentDidMount() {
     this.loadSensors();
+
+    var intervalId = setInterval(this.loadAllUpdates.bind(this), 5000);
+    this.setState({intervalId: intervalId});
+  }
+
+  componentWillUnmount() {
+   clearInterval(this.state.intervalId);
   }
 
   loadSensors() {
@@ -29,7 +37,49 @@ class Room extends React.Component {
     });
   }
 
-  updateCount(val) {
+  loadAllUpdates() {
+    this.state.sensors.forEach((rs, idx) => {
+      this.loadNewUpdates(rs, idx);
+    });
+  }
+
+  loadNewUpdates(rs, rs_idx) {
+    var sensor = rs.sensor;
+
+    var latest_id = -1;
+    sensor.updates.forEach((u) => {
+      if (u.id > latest_id)
+        latest_id = u.id;
+    });
+    
+    $.ajax({
+      url: this._updateUrl(sensor.id, latest_id),
+      dataType: 'json',
+      success: function(data) {
+        for (let i = data.length-1; i >= 0; i--) {
+          this.setState(update(this.state, {
+            sensors: {
+              [rs_idx]: {
+                sensor: {
+                  updates: {$unshift: [data[i]]}
+                }
+              }
+            }
+          }));
+          this._updateCount(data[i].delta*rs.polarity);
+        }
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.updates_url, status, err.toString());
+      }.bind(this)
+    });
+  }
+
+  _updateUrl(sensor_id, latest_id) {
+    return "/v1/sensors/" + sensor_id + "/updates/?latest=" + latest_id;
+  }
+
+  _updateCount(val) {
     this.setState({count: this.state.count + val});
   }
 
@@ -39,9 +89,9 @@ class Room extends React.Component {
         id={s.sensor.id}
         key={s.sensor.id.toString()}
         polarity={s.polarity}
-        sensor_url={"/v1/sensors/" + s.sensor.id + "/"}
-        updates_url={"/v1/sensors/" + s.sensor.id + "/updates/"}
-        onUpdate={this.updateCount.bind(this)} />
+        name={s.sensor.name}
+        dev_eui={s.sensor.dev_eui}
+        updates={s.sensor.updates} />
     );
     return (
       <div className="section row">

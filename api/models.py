@@ -12,6 +12,7 @@ class Sensor(models.Model):
             'id': self.id,
             'name': self.name,
             'dev_eui': self.dev_eui,
+            'updates': [s.as_dict() for s in self.update_set.all().order_by('-id')],
         }
 
         if with_relationships:

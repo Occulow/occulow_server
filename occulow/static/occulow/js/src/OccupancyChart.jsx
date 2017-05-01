@@ -38,7 +38,7 @@ class OccupancyChart extends React.Component {
       <div>
         <svg id={this.props.chartId} width={this.props.width} height={this.props.height}>
           <g transform={transform}>
-            <path fill="none" d={line(this.props.data)} strokeLinecap="round" stroke="steelblue" stroke-width="1.5"/>
+            <path fill="none" d={line(this.props.data)} strokeLinecap="round" stroke="steelblue" strokeWidth="1.5"/>
           </g>
         </svg>
       </div>

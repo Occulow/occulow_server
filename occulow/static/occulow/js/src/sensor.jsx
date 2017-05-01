@@ -4,73 +4,14 @@ import OccupancyChart from './OccupancyChart.jsx';
 class Sensor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      name: '',
-      dev_eui: '',
-      updates: [],
-    };
   }
 
   componentDidMount() {
-    this.loadSensor();
-    this.loadUpdates();
     $('.collapsible').collapsible();
-
-    var intervalId = setInterval(this.loadUpdates.bind(this), 5000);
-    this.setState({intervalId: intervalId});
-  }
-
-  componentWillUnmount() {
-   clearInterval(this.state.intervalId);
-  }
-
-  loadSensor() {
-    $.ajax({
-      url: this.props.sensor_url,
-      dataType: 'json',
-      success: function(data) {
-        this.setState({
-          name: data.name,
-          dev_eui: data.dev_eui
-        })
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.sensor_url, status, err.toString());
-      }.bind(this)
-    });
-  }
-
-  loadUpdates() {
-    var latest_id;
-    if (this.state.updates.length > 0) {
-      latest_id = this.state.updates[0].id
-    } else {
-      latest_id = -1
-    }
-
-    const url = this.props.updates_url + "?latest=" + latest_id;
-    
-    $.ajax({
-      url: url,
-      dataType: 'json',
-      success: function(data) {
-        var newArr = this.state.updates;
-        for (let i = data.length-1; i >= 0; i--) {
-          newArr.unshift(data[i]);
-          this.props.onUpdate(data[i].delta*this.props.polarity);
-        }
-        this.setState({
-          updates: newArr
-        });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.updates_url, status, err.toString());
-      }.bind(this)
-    });
   }
 
   render() {
-    const updates = this.state.updates.map((update) => 
+    const updates = this.props.updates.map((update) => 
       <tr key={update.id.toString()}>
         <td>{update.formatted_time}</td>
         <td>{update.count_in}</td>
@@ -82,11 +23,11 @@ class Sensor extends React.Component {
     return (
       <li>
         <div className="collapsible-header white">
-          <h5>{this.state.name} sensor</h5>
+          <h5>{this.props.name} sensor</h5>
         </div>
         <div className="collapsible-body">
-          <OccupancyChart width={400} height={200} chartId={this.state.name} data={this.state.updates}/>
-          <p>Dev EUI: {this.state.dev_eui}</p>
+          <OccupancyChart width={400} height={200} chartId={this.props.name} data={this.props.updates}/>
+          <p>Dev EUI: {this.props.dev_eui}</p>
           <p>Polarity: {this.props.polarity}</p>
           <h5>Updates</h5>
           <table>
