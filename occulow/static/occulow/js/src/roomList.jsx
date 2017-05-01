@@ -69,7 +69,6 @@ class RoomList extends React.Component {
     );
     return (
       <div>
-        <h2>Rooms</h2>
         {rooms}
         <RoomForm url={this.props.url} onNewRoom={this.onNewRoom.bind(this)}/>
         <SensorForm url={'/v1/sensors/'} />

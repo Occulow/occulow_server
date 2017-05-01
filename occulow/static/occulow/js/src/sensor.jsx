@@ -1,4 +1,5 @@
 import React from 'react';
+import Chart from 'chart.js';
 
 class Sensor extends React.Component {
   constructor(props) {
@@ -77,12 +78,15 @@ class Sensor extends React.Component {
         <td>{update.delta * this.props.polarity}</td>
       </tr>
     );
+
     return (
       <li>
-        <div className="collapsible-header">
-          <h5>{this.state.name} - {this.state.dev_eui} ({this.props.polarity})</h5>
+        <div className="collapsible-header green lighten-2">
+          <h5>{this.state.name} sensor</h5>
         </div>
         <div className="collapsible-body">
+          <p>Dev EUI: {this.state.dev_eui}</p>
+          <p>Polarity: {this.props.polarity}</p>
           <h5>Updates</h5>
           <table>
             <thead>

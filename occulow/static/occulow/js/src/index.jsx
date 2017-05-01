@@ -13,11 +13,6 @@ class App extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col s12">
-            <h1>Occulow</h1>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col s12">
             <RoomList room_url='/v1/rooms/' sensor_url='/v1/sensors/'/>
           </div>
         </div>

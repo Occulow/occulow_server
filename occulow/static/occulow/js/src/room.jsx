@@ -44,12 +44,14 @@ class Room extends React.Component {
         onUpdate={this.updateCount.bind(this)} />
     );
     return (
-      <div>
-        <h4>{this.props.name}: {this.state.count}</h4>
-        <h5>Sensors</h5>
-        <ul className="collapsible" data-collapsible="accordion">
+      <div className="section row">
+        <div className="col s12 m8">
+        <h3>{this.props.name}</h3>
+        <h4>Current occupancy: <span className="light-blue-text">{this.state.count}</span></h4>
+        <ul className="collapsible green lighten-2" data-collapsible="accordion">
           {sensors}
         </ul>
+        </div>
       </div>
     );
   }
