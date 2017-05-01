@@ -45,12 +45,16 @@ class Room extends React.Component {
     );
     return (
       <div className="section row">
-        <div className="col s12 m8">
-        <h3>{this.props.name}</h3>
-        <h4>Current occupancy: <span className="light-blue-text">{this.state.count}</span></h4>
-        <ul className="collapsible red lighten-2" data-collapsible="accordion">
-          {sensors}
-        </ul>
+        <div className="col s12 m10">
+        <div className="card red lighten-2">
+          <div className="card-content">
+            <h3>{this.props.name}</h3>
+            <h4>Current occupancy: <span className="light-blue-text text-darken-3">{this.state.count}</span></h4>
+            <ul className="collapsible green lighten-2" data-collapsible="accordion">
+              {sensors}
+            </ul>
+          </div>
+        </div>
         </div>
       </div>
     );
