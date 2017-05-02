@@ -97,9 +97,6 @@ class Room extends React.Component {
 
   _within24Hours(time) {
     const ONE_DAY = 60 * 60 * 1000 * 24;
-    console.log(new Date() - time)
-    console.log(time);
-
     return ((new Date()) - time) < ONE_DAY;
   }
 
@@ -123,7 +120,6 @@ class Room extends React.Component {
       });
     });
 
-    console.log(data);
     return data;
   }
 
@@ -144,7 +140,7 @@ class Room extends React.Component {
           <div className="card-content">
             <h3>{this.props.name}</h3>
             <h4>Current occupancy: <span className="light-blue-text text-darken-3">{this.state.count}</span></h4>
-            <OccupancyChart width={400} height={200} chartId={this.props.name} data={this._chartData()}/>
+            <OccupancyChart width={600} height={400} chartId={this.props.name} data={this._chartData()}/>
             <ul className="collapsible white" data-collapsible="accordion">
               {sensors}
             </ul>
