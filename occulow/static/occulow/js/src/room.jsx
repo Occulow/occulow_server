@@ -6,7 +6,8 @@ class Room extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: this.props.count,
+      count: 0,
+      count_history: [],
       sensors: []
     };
   }
@@ -29,7 +30,13 @@ class Room extends React.Component {
       success: function(data) {
         this.setState({
           sensors: data
-        })
+        });
+        data.forEach((rs) =>{
+          var reversed = rs.sensor.updates.slice(0).reverse()
+          reversed.forEach((u) => {
+            this._updateCount(u.delta*rs.polarity);
+          });
+        });
       }.bind(this),
       error: function(xhr, status, err) {
         console.error(this.props.sensors_url, status, err.toString());
@@ -80,7 +87,11 @@ class Room extends React.Component {
   }
 
   _updateCount(val) {
-    this.setState({count: this.state.count + val});
+    var new_count = this.state.count + val;
+    this.setState(update(this.state, {
+      count: {$set: new_count},
+      count_history: {$push: [new_count]}
+    }));
   }
 
   render() {
