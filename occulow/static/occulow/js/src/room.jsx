@@ -1,6 +1,7 @@
 import React from 'react';
 import Sensor from './sensor.jsx'
 import update from 'immutability-helper';
+import OccupancyChart from './OccupancyChart.jsx';
 
 class Room extends React.Component {
   constructor(props) {
@@ -94,6 +95,38 @@ class Room extends React.Component {
     }));
   }
 
+  _within24Hours(time) {
+    const ONE_DAY = 60 * 60 * 1000 * 24;
+    console.log(new Date() - time)
+    console.log(time);
+
+    return ((new Date()) - time) < ONE_DAY;
+  }
+
+  _chartData() {
+    var allUpdates = []
+    this.state.sensors.forEach((rs) => {
+      var newUpdates = rs.sensor.updates.filter((u) => this._within24Hours(u.time)).slice(0);
+      newUpdates.forEach((u) => u.polarity = rs.polarity);
+      allUpdates = allUpdates.concat(newUpdates);
+    })
+
+    allUpdates.sort((a,b) => a.id - b.id);
+
+    var count = 0;
+    var data = []
+    allUpdates.forEach((u) => {
+      count += u.delta * u.polarity;
+      data.push({
+        count: count,
+        time: u.d3_time
+      });
+    });
+
+    console.log(data);
+    return data;
+  }
+
   render() {
     const sensors = this.state.sensors.map((s) => 
       <Sensor
@@ -111,6 +144,7 @@ class Room extends React.Component {
           <div className="card-content">
             <h3>{this.props.name}</h3>
             <h4>Current occupancy: <span className="light-blue-text text-darken-3">{this.state.count}</span></h4>
+            <OccupancyChart width={400} height={200} chartId={this.props.name} data={this._chartData()}/>
             <ul className="collapsible white" data-collapsible="accordion">
               {sensors}
             </ul>

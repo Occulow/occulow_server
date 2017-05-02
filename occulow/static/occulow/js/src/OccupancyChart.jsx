@@ -23,14 +23,14 @@ class OccupancyChart extends React.Component {
     
     var line = d3.line()
       .x(function (d) {
-        return x(parseDate(d.d3_time));
+        return x(parseDate(d.time));
       })
       .y(function (d) {
-        return y(+d.delta);
+        return y(+d.count);
       })
 
-    x.domain(d3.extent(this.props.data, function(d) { return parseDate(d.d3_time); }));
-    y.domain(d3.extent(this.props.data, function(d) { return +d.delta; }));
+    x.domain(d3.extent(this.props.data, function(d) { return parseDate(d.time); }));
+    y.domain(d3.extent(this.props.data, function(d) { return +d.count; }));
 
     var transform='translate(' + margin.left + ',' + margin.top + ')';
 

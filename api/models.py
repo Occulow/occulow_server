@@ -85,7 +85,7 @@ class Update(models.Model):
         data = {
             'type': 'update',
             'id': self.id,
-            'time': str(self.time),
+            'time': str(self.time.timestamp() * 1000),
             'd3_time': self.d3_time(), 
             'formatted_time': self.formatted_time(),
             'count_in': self.count_in,
