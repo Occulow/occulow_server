@@ -9,7 +9,8 @@ class Room extends React.Component {
     this.state = {
       count: 0,
       count_history: [],
-      sensors: []
+      sensors: [],
+      graph_width: 0
     };
   }
 
@@ -17,7 +18,11 @@ class Room extends React.Component {
     this.loadSensors();
 
     var intervalId = setInterval(this.loadAllUpdates.bind(this), 5000);
-    this.setState({intervalId: intervalId});
+    var width = $(this.card_div).css('width').slice(0,-2);
+    this.setState({
+      intervalId: intervalId,
+      graph_width: width
+    });
   }
 
   componentWillUnmount() {
@@ -137,10 +142,10 @@ class Room extends React.Component {
       <div className="section row">
         <div className="col s12 m10">
         <div className="card blue-grey lighten-4">
-          <div className="card-content">
+          <div className="card-content" ref={(e) => this.card_div = e}>
             <h3>{this.props.name}</h3>
             <h4>Current occupancy: <span className="light-blue-text text-darken-3">{this.state.count}</span></h4>
-            <OccupancyChart width={800} height={400} chartId={this.props.name} data={this._chartData()}/>
+            <OccupancyChart width={this.state.graph_width} height={400} chartId={this.props.name} data={this._chartData()}/>
             <ul className="collapsible white" data-collapsible="accordion">
               {sensors}
             </ul>
