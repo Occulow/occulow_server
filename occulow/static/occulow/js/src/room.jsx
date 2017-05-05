@@ -136,11 +136,11 @@ class Room extends React.Component {
     return (
       <div className="section row">
         <div className="col s12 m10">
-        <div className="card blue-grey lighten-2">
+        <div className="card blue-grey lighten-4">
           <div className="card-content">
             <h3>{this.props.name}</h3>
             <h4>Current occupancy: <span className="light-blue-text text-darken-3">{this.state.count}</span></h4>
-            <OccupancyChart width={600} height={400} chartId={this.props.name} data={this._chartData()}/>
+            <OccupancyChart width={800} height={400} chartId={this.props.name} data={this._chartData()}/>
             <ul className="collapsible white" data-collapsible="accordion">
               {sensors}
             </ul>
