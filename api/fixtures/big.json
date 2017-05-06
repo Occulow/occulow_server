@@ -1,0 +1,5164 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "api",
+    "model": "sensor"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "api",
+    "model": "roomsensor"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "api",
+    "model": "room"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "api",
+    "model": "update"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c0sppiyf64fj25oslqqorbxkr9syvgtp",
+  "fields": {
+    "session_data": "NDg4NmIzMzg1MzQyMzcyMTU4OThmOThiOWNkZDlkZDQ0MjY0MGU4Mzp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiJiOTY0MTFmNTE2NDQ3Y2ZhYTc2ZmE0YTA1ODJjMzE1ZmY3MzQyYTkwIn0=",
+    "expire_date": "2017-05-16T18:48:28.962Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v55z92itmwu1jx2pqnz4qtq8dhxo809l",
+  "fields": {
+    "session_data": "NDU1YTNjM2MyMzA1MTMxNjlkZDJjZWMzYmNjODA2NGMxMTUwYmU3ZDp7Il9hdXRoX3VzZXJfaGFzaCI6ImI5NjQxMWY1MTY0NDdjZmFhNzZmYTRhMDU4MmMzMTVmZjczNDJhOTAiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+    "expire_date": "2017-05-17T14:58:39.217Z"
+  }
+},
+{
+  "model": "api.sensor",
+  "pk": 1,
+  "fields": {
+    "name": "Library entry",
+    "dev_eui": "1122334455667799"
+  }
+},
+{
+  "model": "api.sensor",
+  "pk": 2,
+  "fields": {
+    "name": "Weight room entry",
+    "dev_eui": "0000000000000010"
+  }
+},
+{
+  "model": "api.roomsensor",
+  "pk": 1,
+  "fields": {
+    "sensor": 1,
+    "room": 1,
+    "polarity": 1
+  }
+},
+{
+  "model": "api.roomsensor",
+  "pk": 2,
+  "fields": {
+    "sensor": 2,
+    "room": 2,
+    "polarity": -1
+  }
+},
+{
+  "model": "api.room",
+  "pk": 1,
+  "fields": {
+    "name": "Library",
+    "count": 86
+  }
+},
+{
+  "model": "api.room",
+  "pk": 2,
+  "fields": {
+    "name": "Weight Room",
+    "count": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 156,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:44:02.045Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 157,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:44:26.505Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 158,
+  "fields": {
+    "count_in": 0,
+    "count_out": 2,
+    "time": "2017-05-04T15:44:42.246Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 159,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:44:52.326Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 160,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T15:45:08.877Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 161,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:45:31.376Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 162,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T15:45:48.033Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 163,
+  "fields": {
+    "count_in": 4,
+    "count_out": 2,
+    "time": "2017-05-04T15:46:18.307Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 164,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T15:46:35.963Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 165,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:47:03.776Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 166,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T15:47:21.850Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 167,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:47:52.436Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 168,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:48:04.952Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 169,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:48:22.553Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 170,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:48:44.197Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 171,
+  "fields": {
+    "count_in": 1,
+    "count_out": 3,
+    "time": "2017-05-04T15:49:36.643Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 172,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:50:04.854Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 173,
+  "fields": {
+    "count_in": 7,
+    "count_out": 5,
+    "time": "2017-05-04T15:51:52.099Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 174,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T15:52:04.853Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 175,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T15:52:17.871Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 176,
+  "fields": {
+    "count_in": 9,
+    "count_out": 6,
+    "time": "2017-05-04T15:54:19.999Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 177,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T15:57:35.456Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 178,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T15:58:09.200Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 179,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T15:58:31.288Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 180,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T15:59:09.830Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 181,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T15:59:35.916Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 182,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:00:04.024Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 183,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:00:14.510Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 184,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:00:39.848Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 185,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-04T16:01:11.173Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 186,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:01:31.830Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 187,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:01:49.330Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 188,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:02:20.716Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 189,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:03:53.265Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 190,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:04:11.575Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 191,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:04:22.668Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 192,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:04:41.823Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 193,
+  "fields": {
+    "count_in": 4,
+    "count_out": 1,
+    "time": "2017-05-04T16:05:34.219Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 194,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T16:06:26.182Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 195,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:08:13.273Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 196,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:08:23.639Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 197,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:08:41.725Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 198,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:09:10.562Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 199,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:09:49.806Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 200,
+  "fields": {
+    "count_in": 1,
+    "count_out": 3,
+    "time": "2017-05-04T16:10:34.895Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 201,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:10:45.314Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 202,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:11:09.956Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 203,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:11:26.332Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 204,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:11:47.684Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 205,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:12:05.197Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 206,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:12:42.488Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 207,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:13:21.627Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 208,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:13:42.267Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 209,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:14:42.461Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 210,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:14:58.231Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 211,
+  "fields": {
+    "count_in": 0,
+    "count_out": 2,
+    "time": "2017-05-04T16:16:06.996Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 212,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:17:26.687Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 213,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:18:03.741Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 214,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:18:28.728Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 215,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:18:47.667Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 216,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:19:09.752Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 217,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:19:37.291Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 218,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:20:09.268Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 219,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:20:40.164Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 220,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:20:55.104Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 221,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:21:06.757Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 222,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:21:17.434Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 223,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:21:39.324Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 224,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:21:54.153Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 225,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:22:08.241Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 226,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T16:22:43.883Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 227,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:22:57.621Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 228,
+  "fields": {
+    "count_in": 5,
+    "count_out": 2,
+    "time": "2017-05-04T16:24:07.822Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 229,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:24:24.908Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 230,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:25:07.073Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 231,
+  "fields": {
+    "count_in": 3,
+    "count_out": 2,
+    "time": "2017-05-04T16:25:51.171Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 232,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:26:24.297Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 233,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:26:35.214Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 234,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:26:49.795Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 235,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-04T16:27:19.474Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 236,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:28:53.723Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 237,
+  "fields": {
+    "count_in": 5,
+    "count_out": 2,
+    "time": "2017-05-04T16:30:02.154Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 238,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:30:22.701Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 239,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:30:42.245Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 240,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-04T16:31:13.221Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 241,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T16:31:48.919Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 242,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:32:15.672Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 243,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:32:32.469Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 244,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:32:49.622Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 245,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:33:02.253Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 246,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T16:33:31.427Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 247,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:33:46.826Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 248,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:33:58.100Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 249,
+  "fields": {
+    "count_in": 5,
+    "count_out": 3,
+    "time": "2017-05-04T16:34:58.050Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 250,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:35:32.547Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 251,
+  "fields": {
+    "count_in": 2,
+    "count_out": 3,
+    "time": "2017-05-04T16:35:53.275Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 252,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:36:16.264Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 253,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:36:30.308Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 254,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:36:40.508Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 255,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-04T16:37:01.254Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 256,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:37:11.374Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 257,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:37:31.700Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 258,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T16:37:50.188Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 259,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:38:22.256Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 260,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:38:39.445Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 261,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T16:38:56.252Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 262,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:39:10.985Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 263,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:39:20.869Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 264,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:39:36.653Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 265,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:39:47.623Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 266,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:40:02.167Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 267,
+  "fields": {
+    "count_in": 9,
+    "count_out": 3,
+    "time": "2017-05-04T16:40:30.084Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 268,
+  "fields": {
+    "count_in": 4,
+    "count_out": 1,
+    "time": "2017-05-04T16:40:59.942Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 269,
+  "fields": {
+    "count_in": 8,
+    "count_out": 2,
+    "time": "2017-05-04T16:41:31.531Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 270,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:41:56.386Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 271,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:42:07.862Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 272,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:42:40.285Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 273,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-04T16:43:31.475Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 274,
+  "fields": {
+    "count_in": 8,
+    "count_out": 2,
+    "time": "2017-05-04T16:44:39.706Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 275,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:44:58.368Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 276,
+  "fields": {
+    "count_in": 1,
+    "count_out": 4,
+    "time": "2017-05-04T16:45:22.988Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 277,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:46:25.360Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 278,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:46:45.644Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 279,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:47:09.309Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 280,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T16:47:29.383Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 281,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:47:46.580Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 282,
+  "fields": {
+    "count_in": 0,
+    "count_out": 2,
+    "time": "2017-05-04T16:48:02.015Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 283,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T16:48:13.990Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 284,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:48:23.881Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 285,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:48:39.279Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 286,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:49:05.282Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 287,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:49:16.470Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 288,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:49:34.059Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 289,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T16:49:57.212Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 290,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:50:33.295Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 291,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:50:43.264Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 292,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T16:50:57.571Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 293,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T16:51:38.378Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 294,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:51:48.678Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 295,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-04T16:52:11.680Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 296,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:52:22.399Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 297,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:52:32.422Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 298,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:52:45.193Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 299,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:53:04.875Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 300,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:53:18.866Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 301,
+  "fields": {
+    "count_in": 3,
+    "count_out": 5,
+    "time": "2017-05-04T16:53:39.600Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 302,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:53:51.021Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 303,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:54:01.917Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 304,
+  "fields": {
+    "count_in": 0,
+    "count_out": 2,
+    "time": "2017-05-04T16:54:18.758Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 305,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T16:54:31.624Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 306,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T16:54:43.863Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 307,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T16:54:56.869Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 308,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:55:08.454Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 309,
+  "fields": {
+    "count_in": 3,
+    "count_out": 0,
+    "time": "2017-05-04T16:55:25.433Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 310,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T16:55:43.292Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 311,
+  "fields": {
+    "count_in": 3,
+    "count_out": 4,
+    "time": "2017-05-04T16:56:20.539Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 312,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T16:56:52.215Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 315,
+  "fields": {
+    "count_in": 3,
+    "count_out": 4,
+    "time": "2017-05-04T17:07:15.800Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 316,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-04T17:08:27.889Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 317,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-04T17:08:46.204Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 318,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-04T17:09:02.891Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 319,
+  "fields": {
+    "count_in": 3,
+    "count_out": 0,
+    "time": "2017-05-04T17:09:21.188Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 320,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T17:09:33.161Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 321,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-04T17:09:47.262Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 322,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-04T17:10:01.226Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 323,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-04T17:10:16.476Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 324,
+  "fields": {
+    "count_in": 7,
+    "count_out": 9,
+    "time": "2017-05-04T17:10:50.562Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 325,
+  "fields": {
+    "count_in": 4,
+    "count_out": 1,
+    "time": "2017-05-04T17:11:37.530Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 326,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T17:12:24.857Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 327,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-04T17:13:13.968Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 328,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-04T17:14:00.591Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 329,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T14:34:52Z",
+    "sensor": 2
+  }
+},
+{
+  "model": "api.update",
+  "pk": 330,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T14:42:08Z",
+    "sensor": 2
+  }
+},
+{
+  "model": "api.update",
+  "pk": 331,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-06T14:44:02Z",
+    "sensor": 2
+  }
+},
+{
+  "model": "api.update",
+  "pk": 332,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T14:50:21Z",
+    "sensor": 2
+  }
+},
+{
+  "model": "api.update",
+  "pk": 333,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-06T16:20:49.081Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 334,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:21:22.693Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 335,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:21:33.823Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 336,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-06T16:21:53.051Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 337,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:22:04.427Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 338,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-06T16:22:27.470Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 339,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-06T16:22:41.595Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 340,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-06T16:22:54.349Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 341,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-06T16:23:08.242Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 342,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-06T16:23:21.026Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 343,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:23:32.677Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 344,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:23:46.063Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 345,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:23:58.224Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 346,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:24:09.697Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 347,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:24:20.895Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 348,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:24:32.527Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 349,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:25:04.231Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 350,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T16:25:16.652Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 351,
+  "fields": {
+    "count_in": 4,
+    "count_out": 3,
+    "time": "2017-05-06T16:25:43.011Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 352,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-06T16:26:00.666Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 353,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-06T16:26:24.648Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 354,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:26:36.002Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 355,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-06T16:26:49.842Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 356,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-06T16:27:11.813Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 357,
+  "fields": {
+    "count_in": 3,
+    "count_out": 3,
+    "time": "2017-05-06T16:27:32.907Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 358,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:27:47.478Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 359,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:28:08.348Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 360,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:28:40.715Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 361,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-06T16:29:10.848Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 362,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:29:22.013Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 363,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:30:13.396Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 364,
+  "fields": {
+    "count_in": 6,
+    "count_out": 6,
+    "time": "2017-05-06T16:30:48.709Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 365,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:30:58.744Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 366,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:31:08.753Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 367,
+  "fields": {
+    "count_in": 1,
+    "count_out": 2,
+    "time": "2017-05-06T16:31:25.820Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 368,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:31:41.910Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 369,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-06T16:31:52.984Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 370,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:32:02.931Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 371,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T16:32:13.980Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 372,
+  "fields": {
+    "count_in": 4,
+    "count_out": 4,
+    "time": "2017-05-06T16:32:31.102Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 373,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T16:33:01.918Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 374,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-06T16:33:31.005Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 375,
+  "fields": {
+    "count_in": 4,
+    "count_out": 4,
+    "time": "2017-05-06T16:33:53.583Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 376,
+  "fields": {
+    "count_in": 1,
+    "count_out": 1,
+    "time": "2017-05-06T16:34:09.219Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 377,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T16:34:25.436Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 378,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:34:40.089Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 379,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:35:02.785Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 380,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:35:19.530Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 381,
+  "fields": {
+    "count_in": 0,
+    "count_out": 2,
+    "time": "2017-05-06T16:35:47.335Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 382,
+  "fields": {
+    "count_in": 0,
+    "count_out": 4,
+    "time": "2017-05-06T16:36:41.338Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 383,
+  "fields": {
+    "count_in": 4,
+    "count_out": 4,
+    "time": "2017-05-06T16:37:12.302Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 384,
+  "fields": {
+    "count_in": 3,
+    "count_out": 3,
+    "time": "2017-05-06T16:38:45.531Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 385,
+  "fields": {
+    "count_in": 3,
+    "count_out": 1,
+    "time": "2017-05-06T16:39:10.765Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 386,
+  "fields": {
+    "count_in": 2,
+    "count_out": 2,
+    "time": "2017-05-06T16:39:37.664Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 387,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-06T16:39:58.791Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 388,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:40:10.016Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 389,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:40:21.263Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 390,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T16:40:37.340Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 391,
+  "fields": {
+    "count_in": 3,
+    "count_out": 0,
+    "time": "2017-05-06T16:40:52.404Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 392,
+  "fields": {
+    "count_in": 6,
+    "count_out": 7,
+    "time": "2017-05-06T16:41:23.783Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 393,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-06T16:41:37.125Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 394,
+  "fields": {
+    "count_in": 0,
+    "count_out": 0,
+    "time": "2017-05-06T16:42:33.251Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 395,
+  "fields": {
+    "count_in": 1,
+    "count_out": 5,
+    "time": "2017-05-06T16:43:06.441Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 396,
+  "fields": {
+    "count_in": 2,
+    "count_out": 0,
+    "time": "2017-05-06T16:43:20.387Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 397,
+  "fields": {
+    "count_in": 3,
+    "count_out": 11,
+    "time": "2017-05-06T16:43:53.250Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 398,
+  "fields": {
+    "count_in": 1,
+    "count_out": 3,
+    "time": "2017-05-06T16:44:29.542Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 399,
+  "fields": {
+    "count_in": 1,
+    "count_out": 0,
+    "time": "2017-05-06T16:45:14.487Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 400,
+  "fields": {
+    "count_in": 2,
+    "count_out": 1,
+    "time": "2017-05-06T16:45:32.675Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "api.update",
+  "pk": 401,
+  "fields": {
+    "count_in": 0,
+    "count_out": 1,
+    "time": "2017-05-06T16:45:44.905Z",
+    "sensor": 1
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add sensor",
+    "content_type": 7,
+    "codename": "add_sensor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change sensor",
+    "content_type": 7,
+    "codename": "change_sensor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete sensor",
+    "content_type": 7,
+    "codename": "delete_sensor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can add room sensor",
+    "content_type": 8,
+    "codename": "add_roomsensor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can change room sensor",
+    "content_type": 8,
+    "codename": "change_roomsensor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can delete room sensor",
+    "content_type": 8,
+    "codename": "delete_roomsensor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add room",
+    "content_type": 9,
+    "codename": "add_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change room",
+    "content_type": 9,
+    "codename": "change_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete room",
+    "content_type": 9,
+    "codename": "delete_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can add update",
+    "content_type": 10,
+    "codename": "add_update"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can change update",
+    "content_type": 10,
+    "codename": "change_update"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can delete update",
+    "content_type": 10,
+    "codename": "delete_update"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$30000$6DpK5JE8Doyb$swoGTtQcTxIBOT8G5SkwdQpd17EUkMXZedmyWzkima0=",
+    "last_login": "2017-05-03T14:58:39.214Z",
+    "is_superuser": true,
+    "username": "foo",
+    "first_name": "",
+    "last_name": "",
+    "email": "bar@bar.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-05-02T18:48:25.345Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2017-05-02T18:48:46.207Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "40",
+    "object_repr": "Library entry-2017-05-02 14:48:38-04:00: +(2) -(0) = 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2017-05-02T18:49:02.703Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "41",
+    "object_repr": "Library entry-2017-05-02 14:48:55-04:00: +(2) -(1) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2017-05-02T18:50:32.521Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "42",
+    "object_repr": "Library entry-2017-05-02 14:50:19-04:00: +(0) -(1) = -1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2017-05-02T18:50:57.893Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "43",
+    "object_repr": "Weight room entry-2017-05-02 14:50:51-04:00: +(1) -(0) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2017-05-02T18:51:17.142Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "44",
+    "object_repr": "Weight room entry-2017-05-02 14:51:11-04:00: +(2) -(0) = 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2017-05-02T18:51:38.259Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "45",
+    "object_repr": "Weight room entry-2017-05-02 14:51:31-04:00: +(0) -(2) = -2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2017-05-02T18:51:59.554Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "44",
+    "object_repr": "Weight room entry-2017-05-02 18:51:11+00:00: +(2) -(0) = 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2017-05-02T18:51:59.556Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "43",
+    "object_repr": "Weight room entry-2017-05-02 18:50:51+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.954Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "39",
+    "object_repr": "Library entry-2017-05-02 15:43:38.838084+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.956Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "38",
+    "object_repr": "Library entry-2017-05-02 15:42:54.222817+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.957Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "37",
+    "object_repr": "Library entry-2017-05-02 15:42:31.556264+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.959Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "36",
+    "object_repr": "Library entry-2017-05-02 15:42:23.360159+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.961Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "35",
+    "object_repr": "Library entry-2017-05-02 15:42:15.167992+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.962Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "34",
+    "object_repr": "Library entry-2017-05-02 15:41:58.787817+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.964Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "33",
+    "object_repr": "Library entry-2017-05-02 15:41:50.584751+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.965Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "32",
+    "object_repr": "Library entry-2017-05-02 15:41:42.389071+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.967Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "31",
+    "object_repr": "Library entry-2017-05-02 15:41:34.201777+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.968Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "30",
+    "object_repr": "Library entry-2017-05-02 15:41:26.005610+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.970Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "29",
+    "object_repr": "Library entry-2017-05-02 15:40:54.492372+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.971Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "28",
+    "object_repr": "Library entry-2017-05-02 15:40:46.294862+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.973Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "27",
+    "object_repr": "Library entry-2017-05-02 15:40:38.106809+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.974Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "26",
+    "object_repr": "Library entry-2017-05-02 15:39:49.063598+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.976Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "Library entry-2017-05-02 15:29:23.114927+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.977Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "24",
+    "object_repr": "Library entry-2017-05-02 15:29:14.964177+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.979Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "23",
+    "object_repr": "Library entry-2017-05-02 15:29:06.802520+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.980Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "22",
+    "object_repr": "Library entry-2017-05-02 15:28:58.642279+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.982Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "21",
+    "object_repr": "Library entry-2017-05-02 15:28:50.490590+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.984Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "20",
+    "object_repr": "Library entry-2017-05-02 15:28:42.342715+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.985Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "19",
+    "object_repr": "Library entry-2017-05-02 15:28:34.207864+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.986Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "Library entry-2017-05-02 15:28:26.033620+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2017-05-02T18:52:14.999Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "Library entry-2017-05-02 15:28:17.882917+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.001Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "16",
+    "object_repr": "Library entry-2017-05-02 15:28:09.724165+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.003Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "15",
+    "object_repr": "Library entry-2017-05-02 15:28:01.568247+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.004Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "14",
+    "object_repr": "Library entry-2017-05-02 15:27:53.414552+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.006Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "Library entry-2017-05-02 15:27:23.295814+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.007Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "Library entry-2017-05-02 15:27:15.095388+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.009Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "Library entry-2017-05-02 15:18:27.537757+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.010Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "Library entry-2017-05-02 15:18:19.330338+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.012Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Library entry-2017-05-02 15:18:11.139364+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2017-05-02T18:52:15.013Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Library entry-2017-05-02 15:18:02.922459+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2017-05-02T18:52:56.065Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "46",
+    "object_repr": "Weight room entry-2017-05-02 14:52:49-04:00: +(0) -(1) = -1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2017-05-02T18:53:08.975Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "47",
+    "object_repr": "Library entry-2017-05-02 14:53:03-04:00: +(2) -(1) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2017-05-02T18:53:26.235Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "48",
+    "object_repr": "Library entry-2017-05-02 14:53:09-04:00: +(3) -(1) = 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2017-05-02T18:53:42.744Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "49",
+    "object_repr": "Library entry-2017-05-02 14:53:36-04:00: +(0) -(1) = -1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2017-05-02T18:54:27.661Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "50",
+    "object_repr": "Weight room entry-2017-05-02 14:54:21-04:00: +(1) -(0) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2017-05-02T18:54:50.648Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "51",
+    "object_repr": "Weight room entry-2017-05-02 14:54:41-04:00: +(0) -(3) = -3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2017-05-02T18:55:18.000Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "52",
+    "object_repr": "Weight room entry-2017-05-02 14:55:11-04:00: +(1) -(0) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.769Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "99",
+    "object_repr": "Library entry-2017-05-03 14:56:42.995611+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.771Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "98",
+    "object_repr": "Library entry-2017-05-03 14:56:32.891709+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.773Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "97",
+    "object_repr": "Library entry-2017-05-03 14:53:28.738517+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.774Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "96",
+    "object_repr": "Library entry-2017-05-03 14:52:28.610963+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.776Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "95",
+    "object_repr": "Library entry-2017-05-03 14:51:17.829669+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.778Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "94",
+    "object_repr": "Library entry-2017-05-03 14:46:09.733806+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.780Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "93",
+    "object_repr": "Library entry-2017-05-03 14:44:16.669652+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.781Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "92",
+    "object_repr": "Library entry-2017-05-03 14:43:57.338269+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.783Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "91",
+    "object_repr": "Library entry-2017-05-03 14:42:28.888163+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.784Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "90",
+    "object_repr": "Library entry-2017-05-03 14:41:14.549139+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.786Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "89",
+    "object_repr": "Library entry-2017-05-03 14:40:54.789043+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.787Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "88",
+    "object_repr": "Library entry-2017-05-03 14:40:32.398741+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.789Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "87",
+    "object_repr": "Library entry-2017-05-03 14:40:21.856940+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.791Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "86",
+    "object_repr": "Library entry-2017-05-03 14:40:03.234851+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.806Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "85",
+    "object_repr": "Library entry-2017-05-03 14:39:53.373956+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.816Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "84",
+    "object_repr": "Library entry-2017-05-03 14:39:41.648831+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.818Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "83",
+    "object_repr": "Library entry-2017-05-03 14:39:30.573658+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.819Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "82",
+    "object_repr": "Library entry-2017-05-03 14:39:20.026551+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.821Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "81",
+    "object_repr": "Library entry-2017-05-03 14:39:05.872508+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.823Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "80",
+    "object_repr": "Library entry-2017-05-03 14:38:52.458395+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.824Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "79",
+    "object_repr": "Library entry-2017-05-03 14:36:29.404652+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.826Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "78",
+    "object_repr": "Library entry-2017-05-03 14:36:19.368831+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.827Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "77",
+    "object_repr": "Library entry-2017-05-03 14:36:07.834189+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.829Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "76",
+    "object_repr": "Library entry-2017-05-03 14:35:57.774730+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.831Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "75",
+    "object_repr": "Library entry-2017-05-03 14:35:44.211507+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.832Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "74",
+    "object_repr": "Library entry-2017-05-03 14:35:28.940324+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.833Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "73",
+    "object_repr": "Library entry-2017-05-03 14:35:17.051630+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.835Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "72",
+    "object_repr": "Library entry-2017-05-03 14:35:06.773636+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.836Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "71",
+    "object_repr": "Library entry-2017-05-03 14:34:51.114003+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.838Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "70",
+    "object_repr": "Library entry-2017-05-03 14:34:35.180446+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.839Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "69",
+    "object_repr": "Library entry-2017-05-03 14:34:17.880951+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.841Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "68",
+    "object_repr": "Library entry-2017-05-03 14:34:01.759141+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.842Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "67",
+    "object_repr": "Library entry-2017-05-03 14:33:42.691751+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.844Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "66",
+    "object_repr": "Library entry-2017-05-03 14:33:32.592764+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.845Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "65",
+    "object_repr": "Library entry-2017-05-03 14:33:19.621612+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.847Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "64",
+    "object_repr": "Library entry-2017-05-03 14:33:08.184994+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.848Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "63",
+    "object_repr": "Library entry-2017-05-03 14:32:57.075048+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.850Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "62",
+    "object_repr": "Library entry-2017-05-03 14:32:47.195763+00:00: +(1) -(2) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.851Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "61",
+    "object_repr": "Library entry-2017-05-03 14:32:23.721261+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.853Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "60",
+    "object_repr": "Library entry-2017-05-03 14:32:10.211019+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.854Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "59",
+    "object_repr": "Library entry-2017-05-03 14:32:00.282609+00:00: +(3) -(4) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.856Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "58",
+    "object_repr": "Library entry-2017-05-03 14:31:25.628128+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.857Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "57",
+    "object_repr": "Library entry-2017-05-03 14:31:13.617574+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.859Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "56",
+    "object_repr": "Library entry-2017-05-03 14:22:50.190816+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.860Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "55",
+    "object_repr": "Library entry-2017-05-03 14:22:08.252922+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.862Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "54",
+    "object_repr": "Library entry-2017-05-03 14:20:29.375164+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.863Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "53",
+    "object_repr": "Library entry-2017-05-03 14:19:50.550025+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.865Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "52",
+    "object_repr": "Weight room entry-2017-05-02 18:55:11+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.866Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "51",
+    "object_repr": "Weight room entry-2017-05-02 18:54:41+00:00: +(0) -(3) = -3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.868Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "50",
+    "object_repr": "Weight room entry-2017-05-02 18:54:21+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.869Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "49",
+    "object_repr": "Library entry-2017-05-02 18:53:36+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.871Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "48",
+    "object_repr": "Library entry-2017-05-02 18:53:09+00:00: +(3) -(1) = 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.872Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "47",
+    "object_repr": "Library entry-2017-05-02 18:53:03+00:00: +(2) -(1) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.874Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "46",
+    "object_repr": "Weight room entry-2017-05-02 18:52:49+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.875Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "45",
+    "object_repr": "Weight room entry-2017-05-02 18:51:31+00:00: +(0) -(2) = -2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.877Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "42",
+    "object_repr": "Library entry-2017-05-02 18:50:19+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.879Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "41",
+    "object_repr": "Library entry-2017-05-02 18:48:55+00:00: +(2) -(1) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.880Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "40",
+    "object_repr": "Library entry-2017-05-02 18:48:38+00:00: +(2) -(0) = 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.882Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Weight room entry-2017-03-15 19:38:51.113000+00:00: +(3) -(5) = -2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.883Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Weight room entry-2017-03-15 19:38:18.046000+00:00: +(2) -(4) = -2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.885Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Library entry-2017-03-15 19:38:10.849000+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.886Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Weight room entry-2017-03-15 19:38:05.848000+00:00: +(3) -(2) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.888Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Library entry-2017-03-15 19:37:59.402000+00:00: +(1) -(2) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.889Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Library entry-2017-03-15 19:37:50.553000+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2017-05-03T15:05:32.891Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Library entry-2017-03-15 19:37:44.943000+00:00: +(3) -(1) = 2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2017-05-03T15:05:41.406Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Library",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"count\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.599Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "113",
+    "object_repr": "Library entry-2017-05-03 15:07:43.198501+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.602Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "112",
+    "object_repr": "Library entry-2017-05-03 15:07:33.778892+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.603Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "111",
+    "object_repr": "Library entry-2017-05-03 15:05:01.049083+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.605Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "110",
+    "object_repr": "Library entry-2017-05-03 15:04:51.779144+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.607Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "109",
+    "object_repr": "Library entry-2017-05-03 15:04:35.537216+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.608Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "108",
+    "object_repr": "Library entry-2017-05-03 15:02:40.304782+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.610Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "107",
+    "object_repr": "Library entry-2017-05-03 15:02:18.651979+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.611Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "106",
+    "object_repr": "Library entry-2017-05-03 15:02:09.294721+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.613Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "105",
+    "object_repr": "Library entry-2017-05-03 15:01:56.070589+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.628Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "104",
+    "object_repr": "Library entry-2017-05-03 15:01:30.641797+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.629Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "103",
+    "object_repr": "Library entry-2017-05-03 15:01:20.191503+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.631Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "102",
+    "object_repr": "Library entry-2017-05-03 15:01:10.277900+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.632Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "101",
+    "object_repr": "Library entry-2017-05-03 15:00:56.618289+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2017-05-03T15:10:28.634Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "100",
+    "object_repr": "Library entry-2017-05-03 15:00:38.090785+00:00: +(4) -(3) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.668Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "155",
+    "object_repr": "Library entry-2017-05-04 15:43:31.647568+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.670Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "154",
+    "object_repr": "Library entry-2017-05-04 15:43:13.696765+00:00: +(3) -(3) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.672Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "153",
+    "object_repr": "Library entry-2017-05-04 15:41:07.113389+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.674Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "152",
+    "object_repr": "Library entry-2017-05-04 15:40:56.358577+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.675Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "151",
+    "object_repr": "Library entry-2017-05-03 15:51:19.773427+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.677Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "150",
+    "object_repr": "Library entry-2017-05-03 15:46:38.087781+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.678Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "149",
+    "object_repr": "Library entry-2017-05-03 15:46:28.055827+00:00: +(2) -(1) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.680Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "148",
+    "object_repr": "Library entry-2017-05-03 15:45:56.961692+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.682Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "147",
+    "object_repr": "Library entry-2017-05-03 15:45:43.715271+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.683Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "146",
+    "object_repr": "Library entry-2017-05-03 15:45:14.265512+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.685Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "145",
+    "object_repr": "Library entry-2017-05-03 15:45:00.035736+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.686Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "144",
+    "object_repr": "Library entry-2017-05-03 15:44:47.724781+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.703Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "143",
+    "object_repr": "Library entry-2017-05-03 15:44:31.463198+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.705Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "142",
+    "object_repr": "Library entry-2017-05-03 15:44:19.163573+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.707Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "141",
+    "object_repr": "Library entry-2017-05-03 15:43:51.578726+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.709Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "140",
+    "object_repr": "Library entry-2017-05-03 15:43:39.264495+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.710Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "139",
+    "object_repr": "Library entry-2017-05-03 15:43:26.958385+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.712Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "138",
+    "object_repr": "Library entry-2017-05-03 15:43:15.156970+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.713Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "137",
+    "object_repr": "Library entry-2017-05-03 15:43:02.854890+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.715Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "136",
+    "object_repr": "Library entry-2017-05-03 15:42:50.430133+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.716Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "135",
+    "object_repr": "Library entry-2017-05-03 15:42:38.635186+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.718Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "134",
+    "object_repr": "Library entry-2017-05-03 15:42:26.835340+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.719Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "133",
+    "object_repr": "Library entry-2017-05-03 15:42:14.525267+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.721Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "132",
+    "object_repr": "Library entry-2017-05-03 15:42:02.091334+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.722Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "131",
+    "object_repr": "Library entry-2017-05-03 15:41:50.299150+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.724Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "130",
+    "object_repr": "Library entry-2017-05-03 15:41:38.505180+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.725Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "129",
+    "object_repr": "Library entry-2017-05-03 15:41:26.203279+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.727Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "128",
+    "object_repr": "Library entry-2017-05-03 15:41:13.785888+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.728Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "127",
+    "object_repr": "Library entry-2017-05-03 15:40:49.839340+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.730Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "126",
+    "object_repr": "Library entry-2017-05-03 15:40:38.789969+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.732Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "125",
+    "object_repr": "Library entry-2017-05-03 15:40:27.239446+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.734Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "124",
+    "object_repr": "Library entry-2017-05-03 15:40:15.675386+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.735Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "123",
+    "object_repr": "Library entry-2017-05-03 15:40:04.626806+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.736Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "122",
+    "object_repr": "Library entry-2017-05-03 15:39:49.358992+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.738Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "121",
+    "object_repr": "Library entry-2017-05-03 15:39:32.690578+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.739Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "120",
+    "object_repr": "Library entry-2017-05-03 15:35:40.718775+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.741Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "119",
+    "object_repr": "Library entry-2017-05-03 15:17:14.203471+00:00: +(1) -(0) = 1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.742Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "118",
+    "object_repr": "Library entry-2017-05-03 15:10:49.653757+00:00: +(0) -(1) = -1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.744Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "117",
+    "object_repr": "Library entry-2017-05-03 15:10:34.836515+00:00: +(1) -(1) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.759Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "116",
+    "object_repr": "Library entry-2017-05-03 15:10:22.103883+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.761Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "115",
+    "object_repr": "Library entry-2017-05-03 15:10:12.973610+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2017-05-04T15:44:04.763Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "114",
+    "object_repr": "Library entry-2017-05-03 15:10:03.760445+00:00: +(0) -(0) = 0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2017-05-04T15:44:15.321Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Library",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"count\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2017-05-04T17:08:32.463Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "314",
+    "object_repr": "Library entry-2017-05-04 17:03:29.924206+00:00: +(53) -(28) = 25",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2017-05-04T17:08:32.466Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "313",
+    "object_repr": "Library entry-2017-05-04 16:58:42.696161+00:00: +(31) -(21) = 10",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2017-05-06T14:34:57.349Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "329",
+    "object_repr": "Weight room entry-2017-05-06 10:34:52-04:00: +(1) -(0) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2017-05-06T14:42:14.169Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "330",
+    "object_repr": "Weight room entry-2017-05-06 10:42:08-04:00: +(0) -(1) = -1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2017-05-06T14:44:14.856Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "331",
+    "object_repr": "Weight room entry-2017-05-06 10:44:02-04:00: +(2) -(0) = 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2017-05-06T14:50:25.955Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "332",
+    "object_repr": "Weight room entry-2017-05-06 10:50:21-04:00: +(1) -(0) = 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
