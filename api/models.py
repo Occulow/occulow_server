@@ -66,20 +66,20 @@ class Room(models.Model):
     def __str__(self):
         return self.name
 
-def local_time():
-    return timezone.localtime(timezone.now())
-
 class Update(models.Model):
     count_in = models.IntegerField()
     count_out = models.IntegerField()
-    time = models.DateTimeField(default=local_time)
+    time = models.DateTimeField(default=timezone.now)
     sensor = models.ForeignKey(Sensor)
 
+    def tz_time(self):
+        return timezone.localtime(self.time)
+
     def formatted_time(self):
-        return self.time.strftime('%a, %b %d %Y at %I:%M:%S %p')
+        return self.tz_time().strftime('%a, %b %d %Y at %I:%M:%S %p')
 
     def d3_time(self):
-        return self.time.strftime('%I:%M:%S')
+        return self.tz_time().strftime('%I:%M:%S')
 
     def delta(self):
         return self.count_in - self.count_out
@@ -88,7 +88,7 @@ class Update(models.Model):
         data = {
             'type': 'update',
             'id': self.id,
-            'time': str(self.time.timestamp() * 1000),
+            'time': str(self.tz_time().timestamp() * 1000),
             'd3_time': self.d3_time(), 
             'formatted_time': self.formatted_time(),
             'count_in': self.count_in,
