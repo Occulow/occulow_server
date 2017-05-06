@@ -64,12 +64,15 @@ class Room(models.Model):
         return data
 
     def __str__(self):
-        return self.name 
+        return self.name
+
+def local_time():
+    return timezone.localtime(timezone.now())
 
 class Update(models.Model):
     count_in = models.IntegerField()
     count_out = models.IntegerField()
-    time = models.DateTimeField(default=timezone.now)
+    time = models.DateTimeField(default=local_time)
     sensor = models.ForeignKey(Sensor)
 
     def formatted_time(self):
